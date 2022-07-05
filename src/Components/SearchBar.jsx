@@ -23,6 +23,10 @@ export default styled(SearchBar)`
     >img{
         width: 4.5vh;
         opacity: 0.2;
+        :hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
     }
     >input,::placeholder{
         font-family: 'Roboto Mono', monospace;

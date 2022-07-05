@@ -81,6 +81,12 @@ export default styled(ProductCardJ)`
         font-style: normal;
         font-weight: 700;
         font-size: 13px;
-        line-height: 17px;  
+        line-height: 17px;
+        :hover{
+            background-color: #FF7700;
+            color: #2A2550;
+            cursor: pointer;
+            box-shadow: none
+        }  
     }
 `
