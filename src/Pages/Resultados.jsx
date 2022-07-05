@@ -5,12 +5,15 @@ import ProductCardJ from '../Components/ProductCardJ'
 import ProductsContainer from '../Components/ProductsContainer'
 import SearchBar from '../Components/SearchBar'
 const Resultados = ({className}) => {
+  const productos = new Array(15).fill("producto")
   return (
     <div className={className}>
     <Logo/>
     <SearchBar/>
     <ProductsContainer>
-    <ProductCardJ/>
+    {productos.map((producto, index) => {
+      return <ProductCardJ key={index}/>
+    } )}
     </ProductsContainer>
     </div>
   )

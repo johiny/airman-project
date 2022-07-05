@@ -13,6 +13,6 @@ export default styled(ProductsContainer)`
     grid-row: 2/-1;
     grid-column: 1/-1;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-auto-rows: 39vh;
     gap: 1vh;
 `
