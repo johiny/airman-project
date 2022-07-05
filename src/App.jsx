@@ -1,11 +1,9 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-
+import './Styles/main.css'
+import Resultados from './Pages/Resultados'
 function App() {
   return (
-    <div className="App">
-      <h1>AirMan - Project</h1>
+    <div>
+      <Resultados/>
     </div>
   )
 }
