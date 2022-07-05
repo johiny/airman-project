@@ -42,16 +42,27 @@ export default styled(ProductCardJ)`
     box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
     border-radius: 10px;
     grid-column: span 1;
-    margin: 2vh 4vh;
+    @media only screen and (max-width: 1526px){
+        grid-column: span 2;
+    }
+    @media only screen and (max-width: 906px){
+        grid-column: span 3;
+    }
+    @media only screen and (max-width: 556px){
+        grid-column: span 6;
+    }
+    margin: 0vh 0vh;
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 80% 20%;
     >div{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
     }
     >img{
+        height: 100%;
         width: 100%;
+        object-fit: cover;
     }
     button{
         grid-column: 1/1;

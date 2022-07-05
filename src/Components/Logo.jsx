@@ -11,4 +11,5 @@ export default styled(Logo)`
     grid-column-start: 1;
     grid-row-start: 1;
     margin: 2%;
+    width: 50%;
 `
