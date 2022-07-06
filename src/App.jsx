@@ -1,12 +1,11 @@
-import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
+import ProductPage from './views/ProductPage'
 
 function App() {
   return (
-    <div className="App">
-      <h1>AirMan - Project</h1>
-    </div>
+    <>
+      <ProductPage />
+    </>
   )
 }
 
