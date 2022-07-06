@@ -1,8 +1,11 @@
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="">
-      <h1 className='text-3xl text-indigo-500' >AirMan - Project</h1>
+    <div>
+      <Home/>
+      <Navbar/>
     </div>
   )
 }
