@@ -1,19 +1,21 @@
-const PricingAndStock = () => {
+import { useState } from "react";
+
+const PricingAndStock = ({price}) => {
+  const [quantity, setQuantity] = useState(1);
+
+  const handleSubstract = () => quantity === 1 ? quantity : setQuantity(quantity - 1)
+  const handleSum = () => quantity < 5 ? setQuantity(quantity + 1) : setQuantity(quantity)
+
   return (
     <section className="w-64 h-72 mx-auto mt-10 mb-14 text-white text-center text-xl flex flex-col justify-evenly items-center md:w-2/3">
-      <h2>$0</h2>
-      <p>In Stock: 40 Items</p>
+      <h2>${price}</h2>
       
-      <form className="flex gap-2 w-48 h-11 bg-blueSecondary mt-4 justify-center items-center place-self-center rounded-full">
-        <label htmlFor="product-quantity">Quantity: </label>
-        <select
-          name="product-quantity"
-          id="quantity"
-          className="cursor-pointer"
-        >
-          <option value="1">1</option>
-        </select>
-      </form>
+      <article className="flex gap-2 w-48 h-11 bg-blueSecondary mt-4 justify-center items-center place-self-center rounded-full">
+        <h2>Quantity: </h2>
+        <p>{quantity}</p>
+        <button onClick={handleSubstract}>-</button>
+        <button onClick={handleSum}>+</button>
+      </article>
 
       <article
         id="btns"

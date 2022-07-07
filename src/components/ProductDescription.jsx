@@ -1,16 +1,28 @@
-const ProductDescription = () => {
-    return ( 
-        <section className="flex flex-col justify-around items-center w-11/12 h-80 text-white mx-auto m-10 gap-5 md:flex-row md:w-5/6 ">
-            <article className="w-96 h-32 p-2 bg-blueSecondary rounded-md md:w-1/2 md:h-full">
-                <h2>Product Description</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat laoreet sapien id imperdiet. Integer ullamcorper neque vitae venenatis efficitur.</p>
-            </article>
+const ProductDescription = ({description, manufacturer, type, model}) => {
+  return (
+    <article className="w-11/12 h-80 flex flex-col justify-around items-center rounded-md bg-blueSecondary text-white text-center mx-auto m-10 gap-5 md:w-5/6 md:justify-evenly">
+      <article>
+        <h2>Product Description</h2>
+        <p>{description}</p>
+      </article>
+      <table className="w-full h-1/2 grid-cols-3 md:w-1/2 md:h-auto">
+        <thead>
+          <tr>
+            <th>Manufacturer</th>
+            <th>Type</th>
+            <th>Model</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{manufacturer}</td>
+            <td>{type}</td>
+            <td>{model}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  );
+};
 
-            <article className="w-96 h-44 p-2 bg-blueSecondary rounded-md text-center md:w-1/2 md:h-full">
-                <h2>Additional Info</h2>
-            </article>
-        </section>
-     );
-}
- 
 export default ProductDescription;
