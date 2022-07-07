@@ -4,13 +4,14 @@ import defaultPhoto from '../Media/default_product_photo.png'
 import { css } from 'styled-components'
 
 // to do arreglar overflow de botones
-const ProductCardJ = ({className}) => {
+const ProductCardJ = ({className, price, image, name}) => {
   return (
     <div className={className}>
-        <img src={defaultPhoto}/>
+        <img src={image}/>
         <div>
+            <ProductName>{name.substring(0, 33)}</ProductName>
             <button>Add To Cart</button>
-            <NormalPrice>$0000</NormalPrice>
+            <NormalPrice>${price}</NormalPrice>
             <DiscountPrice>$0000</DiscountPrice>
         </div>
     </div>
@@ -37,6 +38,16 @@ const DiscountPrice = styled.span`
     ${PriceStyle}
     color: #2A2550;   
 `
+const ProductName = styled.span`
+    ${PriceStyle}
+    font-size: 1.4vh;
+    margin-right: 0;
+    margin-left: 1vh;
+    color: #2A2550;
+    grid-column: 1/2;
+    grid-row: 1/1;
+`
+
 export default styled(ProductCardJ)`
     background-color: #FFFFFF;
     box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
@@ -53,7 +64,7 @@ export default styled(ProductCardJ)`
     }
     margin: 0vh 0vh;
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 70% 30%;
     >div{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -62,7 +73,7 @@ export default styled(ProductCardJ)`
     >img{
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        object-fit: contain;
     }
     button{
         grid-column: 1/1;
