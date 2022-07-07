@@ -1,9 +1,21 @@
-import React from 'react'
+import React, {useRef,useEffect} from 'react'
 import styled from 'styled-components'
 import LoadingJ from './LoadingJ'
+import { useIntersection } from 'react-use'
 const ProductLoaderCard = ({className}) => {
+  const cardLoaderRef = useRef(null)
+  const intersection = useIntersection(cardLoaderRef, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  })
+  useEffect(() => {
+    if(intersection?.isIntersecting){
+      alert("Funciona!")
+    }
+  },[intersection?.isIntersecting])
   return (
-    <div className={className}>
+    <div className={className} ref={cardLoaderRef}>
 		<LoadingJ/>
     </div>
   )

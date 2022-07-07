@@ -9,7 +9,7 @@ const Resultados = ({className}) => {
   const [productos,setProductos] = useState([])
   useEffect(() => {
     const get_products = async () => {
-      let response = await fetch("http://localhost:3030/products?$limit=15")
+      let response = await fetch("https://api-playground-test.herokuapp.com/products?$limit=15")
       response =  await response.json()
       setProductos(response.data)
     }
@@ -24,7 +24,7 @@ const Resultados = ({className}) => {
     {productos.map((producto) => {
       return <ProductCardJ key={producto.upc} name={producto.name} price={producto.price} image={producto.image}/>
     } )}
-    <ProductLoaderCard/>
+    {productos.length > 0 ? <ProductLoaderCard/> : null}
     </ProductsContainer>
     </div>
   )
