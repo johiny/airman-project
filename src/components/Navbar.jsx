@@ -4,7 +4,7 @@ import React from 'react';
 
 function Navbar() {
 
-    const style = "text-[14px] cursor-pointer ml-[25px]"
+    const style = "text-[14px] cursor-pointer ml-[25px]";
 
   return (
     <div className='navbar h-[60px] shadow-md  relative z-10'>
@@ -17,8 +17,8 @@ function Navbar() {
                     border-solid border-lighgrey rounded-md items-center ml-[10px] p-[5px]
                     focus-within:border-[#2A2550] transition-all'>
                     <input className='input outline-none'
-                    type='text'/>
-                    <Search className='' style={{fontSize:'16px'}}/>
+                    type='text' placeholder="Buscar"/>
+                    <Search className='text-[#2A2550]' style={{fontSize:'16px'}}/>
                 </div>
 
             </div>
