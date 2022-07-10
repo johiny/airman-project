@@ -17,8 +17,6 @@ const ProductPage = () => {
 
     return (
       <div>
-        <Announce />
-        <Navbar />
         <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 mb-5">
           <div className="flex-1 flex items-center justify-center">
             <img
@@ -70,7 +68,6 @@ const ProductPage = () => {
           </div>
         </div>
         <Newsletter />
-        <Footer />
       </div>
     );
   };

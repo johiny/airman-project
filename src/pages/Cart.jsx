@@ -26,9 +26,6 @@ function Cart() {
 
   return (
     <div>
-        <Announce/>
-        <Navbar/>
-
         <div className='p-3'>
 
             <div className='flex justify-center text-5xl'>
@@ -209,7 +206,6 @@ function Cart() {
         </div>
 
         <Newsletter/>
-        <Footer/>
     </div>
   )
 }

@@ -1,9 +1,7 @@
-import Announce from '../components/Announce';
-import Navbar from "../components/Navbar";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
 import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
+
 
 import React from 'react'
 
@@ -13,9 +11,6 @@ function CategoryPage() {
 
   return (
     <div>
-        <Announce/>
-        <Navbar/>
-
         <div className='flex flex-col p-5'>
             <h1 className='text-[30px]'>Ropa de Hombre</h1>
             <div className='flex items-center justify-between mt-3'>
@@ -52,7 +47,6 @@ function CategoryPage() {
         <Categories/>
         <Products/>
         <Newsletter/>
-        <Footer/>
     </div>
   )
 }
