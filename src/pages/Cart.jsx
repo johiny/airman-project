@@ -12,10 +12,10 @@ function Cart() {
     const resumenStyle="flex justify-between mt-3 w-[100%]";
 
     // Product Div Style
-    const divProduct ="flex w-[100%] h-auto items-center";
+    const divProduct ="flex w-[100%] h-auto items-center mobile:flex-col";
 
     //  Price and Quantity
-    const priceStyle = "flex flex-col justify-center items-center flex-auto";
+    const priceStyle = "flex flex-col justify-center items-center flex-auto mobile:mt-7 mobile:mb-7";
 
     // Description Product
     const descriptionProduct =" flex items-start flex-col ml-6 h-auto justify-between";
@@ -35,10 +35,10 @@ function Cart() {
                 Carrito
             </div>
 
-            <div className='flex item-center justify-between mt-4'>
+            <div className='flex item-center justify-between mt-4 mobile:flex-col'>
                 <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white mt-0'>seguir comprando</button>
                 
-                <div className='flex underline text-lg hover:cursor-pointer'>
+                <div className='flex underline text-lg hover:cursor-pointer mobile:m-5'>
                     <p>
                         Objetos seleccionados: 2
                     </p>
@@ -51,7 +51,7 @@ function Cart() {
             </div>
 
             {/* Central Div */}
-            <div className='flex flex-row mt-7'>
+            <div className='flex flex-row mt-7 mobile:flex-col'>
 
                 <div className='flex flex-col flex-1 '>
 
@@ -95,7 +95,7 @@ function Cart() {
                             </p>
                         </div>
                     </div>
-                    <hr className='mt-7 mb-7 '/>
+                    <hr className='mt-7 mb-7 mobile:mt-0 '/>
 
                     {/* 2do Product */}
                     <div className={divProduct}>
@@ -135,7 +135,7 @@ function Cart() {
                             </p>
                         </div>
                     </div>
-                    <hr className='mt-7 mb-7 '/>
+                    <hr className='mt-7 mb-7 mobile:mt-0 '/>
 
                      {/* 3er Product */}
                      <div className={divProduct}>
@@ -175,12 +175,12 @@ function Cart() {
                             </p>
                         </div>
                     </div>
-                    <hr className='mt-7 mb-7 '/>
+                    <hr className='mt-7 mb-7 mobile:mt-0'/>
 
 
                 </div>
                 
-                <div className=' p-5 flex-[0.4] w-auto h-[40vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center'>
+                <div className=' p-5 flex-[0.4] w-auto h-[40vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6'>
                     <h1 className='text-[2rem]'>Resumen</h1>
 
                     <div className={resumenStyle}>

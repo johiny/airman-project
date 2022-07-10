@@ -7,11 +7,11 @@ function Newsletter() {
             Boletin Informativo
         </h1>
 
-        <h2 className='text-[20px] mt-2 text-white'>
+        <h2 className='text-[20px] mt-2 text-white mobile:text-center mobile:p-3'>
             Siempre en contacto con nosotros, para sus productos favoritos.
         </h2>
 
-        <div className='flex mt-[3rem] items-center justify-between min-w-[30rem] min-h-[2rem] bg-white border-[#cccccc] rounded-[5px] overflow-hidden'>
+        <div className='flex mt-[3rem] items-center justify-between min-w-[30rem] min-h-[2rem] bg-white border-[#cccccc] rounded-[5px] overflow-hidden mobile:min-w-[20rem]'>
             <input
             type="email"
             placeholder='Correo'

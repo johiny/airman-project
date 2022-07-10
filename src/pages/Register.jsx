@@ -1,82 +1,116 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-export default class Login extends Component {
+export default class Register extends Component {
+  //style
+  inputStyle =
+    "border-[2px] border-silver rounded-lg outline-[#2A2550] p-2 focus:border-[#2A2550] ease-linear duration-200 min-w-0";
 
-    inputStyle="border-[2px] rounded-lg w-[100%] p-2 outline-[#2A2550] focus:border-[#2A2550] ease-liner duration-200";
+  buttonStyle = "mt-5 flex justify-center bg-[#2A2550] text-white font-medium rounded-md p-2 ease-linear duration-200"
+  activeButtonStyle = ' hover:bg-white hover:text-[#2A2550] hover:scale-[1.0.5] hover:border-[2px] hover:shadow-md hover:border-[#2A2550] cursor-pointer'
+  disableButtonStyle = ' opacity-50'
+  //states
+  state = {
+    first: "",
+    last: "",
+    email: "",
+    pass: "",
+    confirm: "",
+    errors: {
+      confirm: false,
+    },
+  };
 
-    state={
-        first:'',
-        last:'',
-        username:'',
-        pass:'',
-        confirm:'',
-    }
-
-    handleChange=(evt)=>{
-        const fields = Object.assign({}, this.state);
-        field[evt.target.name] = evt.target.value;
-        this.setState({...fields})
-    }
+  checkPass = () => {
+     if(this.state.pass === this.state.confirm)
+     {
+         this.setState({...this.state, errors : {confirm : false}})
+     }
+     else
+     {
+       this.setState({...this.state, errors : {confirm : 'No es el mismo'}})
+       ;
+     }
+ }
+  handleChange = (evt) => {
+    const fields = Object.assign({}, this.state);
+    fields[evt.target.name] = evt.target.value;
+    this.setState({ ...fields }, this.checkPass);
+  };
 
   render() {
-    return(
-        <div className='flex justify-center w-[100%] h-[100vh]'>
-            <div className='flex flex-col absolute top-[30%] bg-white shadow-lg border-silver border-[2px] rounded-lg p-5 w-[40%]'>
-                
-                <text className='text-2xl'>Registro</text>
+    return (
+      <div className="flex justify-center w-[100%] h-[100vh] ">
+        <div className="flex flex-col absolute top-[20%] shadow-lg border-silver border-[2px] bg-white rounded-lg p-5 mobile:w-[90%]">
+          <text className="text-2xl ">REGISTRO</text>
 
-                <div className='flex mt-3'>
-                    <input 
-                        className={this.inputStyle + ` mt-2 w-[100%]`}
-                        placeholder='Primer Nombre'
-                        name='first'
-                        value={this.state.first}
-                        onChange={this.handleChange}
-                        required
-                    />
+          {/* First Name Last Name */}
+          <div className="flex mt-7 w-auto">
+            <input
+              className={this.inputStyle + ` mr-3`}
+              name="first"
+              type="text"
+              placeholder="Nombre"
+              onChange={this.handleChange}
+              value={this.state.first}
+              required
+            />
+            <input
+              className={this.inputStyle}
+              name="last"
+              type="text"
+              placeholder="Apellido"
+              onChange={this.handleChange}
+              value={this.state.last}
+            />
+          </div>
 
-                    <input 
-                        className={this.inputStyle + ` mt-2 w-[100%] ml-3`}
-                        placeholder='Apellido'
-                        name='last'
-                        value={this.state.last}
-                        onChange={this.handleChange}
-                        required
-                    />
+          {/* Email */}
+          <input
+            className={this.inputStyle + ` mt-7 mobile:w-[100%]`}
+            name="email"
+            type="email"
+            placeholder="Correo"
+            onChange={this.handleChange}
+            value={this.state.email}
+            required
+          />
 
-                </div>
+          {/* Password */}
+          <div className="flex mt-7">
+            <input
+              className={this.inputStyle + ` mr-3`}
+              name="pass"
+              type="password"
+              placeholder="Contraseña"
+              onChange={this.handleChange}
+              value={this.state.pass}
+              required
+            />
+            <input
+              className={this.inputStyle}
+              name="confirm"
+              type="password"
+              placeholder="Confirmar Contraseña"
+              onChange={this.handleChange}
+              value={this.state.confirm}
+              required
+            />
+          </div>
+          <div className="flex justify-center">
+            <span className="flex-1 mr-3"></span>
+            <span className="flex-1 text-red-500">
+              {this.state.errors.confirm}
+            </span>
+          </div>
 
-                <div className='flex mt-3'>
-                    <input 
-                    className={this.inputStyle + ` mt-2 w-[100%]`}
-                    placeholder='usuario'
-                    name='username'
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                    required
-                    />
-                </div>
-
-                <div className='flex mt-3'>
-                    <input
-                    className={this.inputStyle + ` mt-2 w-[100%]`}
-                    placeholder='contraseña'
-                    name='pass'
-                    value={this.state.pass}
-                    onChange={this.handleChange}
-                    />
-
-                    <input
-                        className={this.inputStyle + ` mt-2 w-[100%] ml-3`}
-                        placeholder='confirmar'
-                        name='confirm'
-                        value={this.state.confirm}
-                        onChange={this.handleChange}
-                    />
-                </div>
-                <input type="button" className='btn mt-7 hover:scale-[1.02]' value="Register"/>
-            </div>
+          {/* Submit button */}
+          <input
+            type="button"
+            className={(this.state.errors.confirm)? this.buttonStyle+this.disableButtonStyle: this.buttonStyle+this.activeButtonStyle}
+            value="Registrarse"
+          />
         </div>
-    )
+      </div>
+    );
   }
 }

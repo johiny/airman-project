@@ -10,6 +10,8 @@ import React from 'react'
 
 const ProductPage = () => {
 
+    // Style img
+    const imgStyle = "rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
 
     const colorSelect="w-[2rem] h-[2rem] rounded-full border-2 p-[10px] cursor-pointer ml-5 hover:border-[#2A2550]";
 
@@ -21,7 +23,7 @@ const ProductPage = () => {
           <div className="flex-1 flex items-center justify-center">
             <img
               src="https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-PISTACHIO-2_360x.jpg?v=1642545216"
-              className="product_img"
+              className={imgStyle}
               alt="product_image"
             />
           </div>
