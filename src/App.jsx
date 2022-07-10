@@ -1,10 +1,10 @@
-import './App.css'
-import ProductPage from './views/ProductPage'
+import DataForm from './views/DataForm'
+//import ProductPage from './views/ProductPage'
 
 function App() {
   return (
     <>
-      <ProductPage />
+      <DataForm />
     </>
   )
 }
