@@ -34,5 +34,4 @@ export default styled(Resultados)`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    height: 100vh;
 `
