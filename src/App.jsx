@@ -19,6 +19,7 @@ function App() {
         <Route path='/' element={<MainLayout/>}>
             <Route path='/' element={<Home/>} />
             <Route path="search" element={<Resultados/>} />
+            <Route path='purchaseForm' element={<DataForm/>} />
         </Route> 
     </WebRoutes>
     </BrowserRouter>
