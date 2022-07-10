@@ -8,6 +8,7 @@ import Register from "./pages/Register";
 import Product from "./components/Product";
 import Products from "./components/Products";
 import Resultados from './Pages/Resultados'
+import DataForm from './views/DataForm'
 function App() {
   return (
     <div>

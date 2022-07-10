@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "formik": "^2.2.9",
+    "yup": "^0.32.11",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@material-ui/core": "^4.12.4",
