@@ -1,4 +1,4 @@
-import { useFetch } from "../hooks/useFetch";
+import  useFetch from "../hooks/useFetch";
 import ProductDescription from "../components/ProductDescription";
 import Loader from "../components/Loader";
 import Message from "../components/Message";

@@ -16,7 +16,6 @@ export default styled(SearchBar)`
     border-radius: 10px;
     grid-column: span 4;
     grid-row: 1/2;
-    align-self: end;
     padding: 2vh 2vh;
     display: flex;
     justify-items: stretch;

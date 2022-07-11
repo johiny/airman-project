@@ -1,4 +1,4 @@
-import './Styles/main.css'
+import './index.css'
 import WebRoutes from './components/WebRoutes';
 import {Route, BrowserRouter} from "react-router-dom"
 import CategoryPage from "./pages/CategoryPage";
@@ -19,15 +19,15 @@ function App() {
         <Route path='/' element={<MainLayout/>}>
             <Route path='/' element={<Home/>} />
             <Route path="categories" element={<CategoryPage/>} />
-            <Route path="search" element={<Resultados/>} />
-            <Route path="product" element={<ProductPage/>} />
+            <Route path="search/:query" element={<Resultados/>} />
+            <Route path="product/:id" element={<ProductPage/>} />
             <Route path="product2" element={<ProductPage2/>} />
             <Route path="cart" element={<Cart/>} />
             <Route path='purchaseForm' element={<DataForm/>} />
             <Route path='register' element={<Register/>}/>
             <Route path='login' element={<Login/>}/>
         </Route>
-        <Route path='/confirmation' element={<Confirmation/>}/>
+        <Route path='/confirmation/:confirmatioState' element={<Confirmation/>}/>
     </WebRoutes>
     </BrowserRouter>
   )

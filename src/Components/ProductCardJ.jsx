@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import defaultPhoto from '../Media/default_product_photo.png'
 import { css } from 'styled-components'
-
+import { useNavigate } from 'react-router-dom'
 // to do arreglar overflow de botones
-const ProductCardJ = ({className, price, image, name}) => {
+const ProductCardJ = ({className, price, image, name, id}) => {
+    const navigate = useNavigate()
   return (
-    <div className={className}>
+    <div className={className} onClick={() => navigate(`/product/${id}`)}>
         <img src={image}/>
         <div>
             <ProductName>{name.substring(0, 33)}</ProductName>
@@ -53,6 +54,10 @@ export default styled(ProductCardJ)`
     box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
     border-radius: 10px;
     grid-column: span 1;
+    :hover{
+        cursor: pointer;
+        background-color: #f9f6f6;
+    }
     @media only screen and (max-width: 1526px){
         grid-column: span 2;
     }

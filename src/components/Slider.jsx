@@ -1,6 +1,6 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
-import {ApiSlides} from '../apifolder/SliderApi';
+import ApiSlides from '../apifolder/SliderApi';
 import './Slider.css';
 
 

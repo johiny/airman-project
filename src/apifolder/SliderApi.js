@@ -1,4 +1,4 @@
-export const ApiSlides = [
+const ApiSlides = [
     {
       src: "https://cdn.discordapp.com/attachments/910733170637410345/994502612915335258/imgcard.jpg",
       content: {
@@ -17,3 +17,5 @@ export const ApiSlides = [
       background: ' bg-[#FF7701]'
     },
     ]
+
+export default ApiSlides    

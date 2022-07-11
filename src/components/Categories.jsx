@@ -1,5 +1,5 @@
 import React from 'react';
-import {ApiCategories} from '../apifolder/CategoryApi';
+import ApiCategories from '../apifolder/CategoryApi';
 import Category from './Category'
 
 function Categories() {

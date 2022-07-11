@@ -1,5 +1,5 @@
 import React from 'react';
-import {ApiTopPropduct}  from '../apifolder/TopProductsApi';
+import ApiTopPropduct  from '../apifolder/TopProductsApi';
 import Product from './Product';
 
 

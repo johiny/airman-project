@@ -18,11 +18,10 @@ const Resultados = ({className}) => {
 
   return (
     <div className={className}>
-    <Logo/>
     <SearchBar/>
     <ProductsContainer>
     {productos.map((producto) => {
-      return <ProductCardJ key={producto.upc} name={producto.name} price={producto.price} image={producto.image}/>
+      return <ProductCardJ key={producto.id} name={producto.name} price={producto.price} image={producto.image} id={producto.id}/>
     } )}
     {productos.length > 0 ? <ProductLoaderCard/> : null}
     </ProductsContainer>
