@@ -1,10 +1,11 @@
 import{Badge} from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react';
-
+import {useNavigate} from "react-router-dom"
 function Navbar() {
 
     const style = "text-[14px] cursor-pointer ml-[25px] mobile:ml-[5px]";
+    const navigate = useNavigate()
 
   return (
     <div className='navbar h-[60px] shadow-md  relative z-10'>
@@ -38,7 +39,7 @@ function Navbar() {
                     Sign In
                 </div>
 
-                <div className={style}>
+                <div className={style} onClick={() => navigate("/cart")}>
                     <Badge badgeContent={2} color='primary'>
                         <ShoppingCartOutlined/>
                     </Badge>

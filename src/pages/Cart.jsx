@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 
 import React from 'react'
 import Counter from '../components/Counter';
+import { useNavigate } from "react-router-dom"
 
 function Cart() {
 
@@ -23,6 +24,7 @@ function Cart() {
     // Style img
     const imgStyle = "w-[7rem] h-[80%] rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
 
+    const navigate = useNavigate()
 
   return (
     <div>
@@ -44,7 +46,7 @@ function Cart() {
                     </p>
                 </div>
 
-                <button className='btn mt-0'>verificar</button>
+                <button className='btn mt-0' onClick={() => navigate("/purchaseForm")}>Pagar</button>
             </div>
 
             {/* Central Div */}

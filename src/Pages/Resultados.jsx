@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Logo from '../Components/Logo'
 import ProductCardJ from '../Components/ProductCardJ'
 import ProductsContainer from '../Components/ProductsContainer'
-import SearchBar from '../Components/SearchBar'
+import SearchBar from '../components/SearchBar'
 import ProductLoaderCard from '../Components/ProductLoaderCard'
 const Resultados = ({className}) => {
   const [productos,setProductos] = useState([])
@@ -32,5 +32,5 @@ const Resultados = ({className}) => {
 export default styled(Resultados)`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: minmax(min-content, max-content) 1fr ;
 `

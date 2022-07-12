@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import magnifyingGlass from '../Media/magnifying-glass-solid.svg'
+
 const SearchBar = ({className}) => {
   return (
     <div className={className}>
         <input placeholder='Search'/>
         <img src={magnifyingGlass}/>
-    </div>
+    </div>  
   )
 }
 
@@ -14,8 +15,10 @@ export default styled(SearchBar)`
     background: #FFFFFF;
     box-shadow: -5px 5px 10px rgba(230, 230, 230, 0.2), 5px -5px 10px rgba(230, 230, 230, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.9), 5px 5px 13px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
     border-radius: 10px;
-    grid-column: span 4;
+    grid-column:  2/6;
+    align-self: center;
     grid-row: 1/2;
+    margin: 2vh 0vh;
     padding: 2vh 2vh;
     display: flex;
     justify-items: stretch;

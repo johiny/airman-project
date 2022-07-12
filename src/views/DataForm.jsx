@@ -3,11 +3,13 @@ import * as Yup from "yup";
 import BasicInfo from "../components/BasicInfo";
 import PaymentInfo from "../components/PaymentInfo";
 import { DataSection, FormButton, FormButtons } from "../styles/stylesCollection";
+import {useNavigate} from "react-router-dom"
 
 const regex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
 
-const handleSubmit = (values) => {
+const handleSubmit = (values, callback) => {
   console.log(values);
+  callback("/confirmation/success")
 };
 
 const dataFormSchema = Yup.object({
@@ -43,6 +45,8 @@ const dataFormSchema = Yup.object({
 });
 
 const DataForm = () => {
+  const navigate = useNavigate()
+  
   return (
     <DataSection>
       <h1>Please enter your info</h1>
@@ -58,7 +62,7 @@ const DataForm = () => {
           expirationDate: "",
           cvv: ""
         }}
-        onSubmit={handleSubmit}
+        onSubmit={(values)=> handleSubmit(values, navigate)}
         validationSchema={dataFormSchema}
       >
         <Form>

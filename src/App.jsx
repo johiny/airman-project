@@ -19,7 +19,9 @@ function App() {
         <Route path='/' element={<MainLayout/>}>
             <Route path='/' element={<Home/>} />
             <Route path="categories" element={<CategoryPage/>} />
-            <Route path="search/:query" element={<Resultados/>} />
+            <Route path="search/" element={<Resultados/>}>
+              <Route path=":id" element={<Resultados/>}/>
+            </Route>
             <Route path="product/:id" element={<ProductPage/>} />
             <Route path="product2" element={<ProductPage2/>} />
             <Route path="cart" element={<Cart/>} />
