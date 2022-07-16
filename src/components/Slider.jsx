@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 import ApiSlides from '../apifolder/SliderApi';
 import './Slider.css';
+import {useNavigate} from 'react-router-dom'; 
 
 
 
@@ -32,6 +33,8 @@ function Slider() {
         }
     }
 
+    const navigate = useNavigate();
+
 
     return (
         <div className='parentDiv h-[540px] bg-white flex items-center justify-between mobile:hidden'>
@@ -58,7 +61,7 @@ function Slider() {
                                 <div className="des flex flex-col flex-1 place-items-start justify-center -ml-11">
                                     <h2 className="text-[50px] text-white">{slide.content.h2}</h2>
                                     <p className="text-[30px] text-white">{slide.content.p}</p>
-                                    <button className="btn mt-10" >Compra Ahora</button>
+                                    <button className="btn mt-10" onClick={()=>navigate("search/")} > Compra Ahora</button>
                                 </div>
                             </div>
                         </div>
