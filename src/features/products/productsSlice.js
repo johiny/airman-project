@@ -1,23 +1,32 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const PRODUCTS_URL = "https://api-playground-test.herokuapp.com/products?$limit=15"
+const PRODUCTS_URL = "https://api-playground-test.herokuapp.com/products"
 
 const initialState = {
-    productsData: {},
+    productsData: [],
     fetchStatus: 'idle',
     error: null
 }
 
 export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () => {
     try {
-        const response = await axios.get(PRODUCTS_URL)
-        return response.data
+        const response = await axios.get(`${PRODUCTS_URL}?$limit=25`)
+        return response.data.data
     } catch (err) {
         return err.message        
     }
 })
 
+export const fetchCustomProducts = createAsyncThunk('products/fetchCustomProducts', async (params) => {
+    try {
+        console.log(params)
+        const response = await axios.get(`${PRODUCTS_URL}?$limit=25&${params}`)
+        return response.data.data
+    } catch (err) {
+        return err.message        
+    }
+})
 
 
 export const productsSlice = createSlice({
@@ -35,6 +44,19 @@ export const productsSlice = createSlice({
         })
 
         builder.addCase(fetchAllProducts.rejected, (state, action) => {
+            state.fetchStatus = 'rejected'
+            state.error = action.error.message
+        })
+        builder.addCase(fetchCustomProducts.pending, (state, action) => {
+            state.fetchStatus = 'pending'
+        })
+
+        builder.addCase(fetchCustomProducts.fulfilled, (state, action) => {
+            state.fetchStatus = 'fulfilled'
+            state.productsData = action.payload
+        })
+
+        builder.addCase(fetchCustomProducts.rejected, (state, action) => {
             state.fetchStatus = 'rejected'
             state.error = action.error.message
         })

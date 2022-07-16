@@ -4,9 +4,12 @@ import {
     ShoppingCartOutlined,
   } from "@material-ui/icons";
   import React, {useState} from "react";
-
+  import { Link } from "react-router-dom";
+  import { useNavigate } from "react-router-dom";
   
   const Product = ({ item }) => {
+
+    const navigate = useNavigate()
   
   const [hoverEffects , setHoverEffects]=useState(' opacity-0')
   
@@ -30,7 +33,7 @@ import {
             <FavoriteBorderOutlined />
           </div>
           <div className={iconStyle}>
-            <SearchOutlined />
+           <SearchOutlined onClick={() => navigate(`/product/${"845678sdjh"}`)}/>
           </div>
         </div>
       </div>

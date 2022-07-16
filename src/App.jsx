@@ -19,11 +19,10 @@ function App() {
         <Route path='/' element={<MainLayout/>}>
             <Route path='/' element={<Home/>} />
             <Route path="categories" element={<CategoryPage/>} />
-            <Route path="search/" element={<Resultados/>}>
-              <Route path=":id" element={<Resultados/>}/>
+            <Route path="search" element={<Resultados/>}>
+              <Route path=":query" element={<Resultados/>}/>
             </Route>
             <Route path="product/:id" element={<ProductPage/>} />
-            <Route path="product2" element={<ProductPage2/>} />
             <Route path="cart" element={<Cart/>} />
             <Route path='purchaseForm' element={<DataForm/>} />
             <Route path='register' element={<Register/>}/>
