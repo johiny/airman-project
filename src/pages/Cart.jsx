@@ -1,14 +1,12 @@
-import Announce from '../components/Announce';
-import Navbar from "../components/Navbar";
 import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
-
 import React from 'react'
 import Counter from '../components/Counter';
 import { useNavigate } from "react-router-dom"
-
+import {useSelector} from "react-redux"
+import {selectProductsCart} from "../Redux/Slices/cartSlice"
 function Cart() {
-
+    const productos = useSelector((state) => selectProductsCart(state))
+    console.log(productos)
     // Margin Resumen
     const resumenStyle="flex justify-between mt-3 w-[100%]";
 
@@ -39,7 +37,7 @@ function Cart() {
                 
                 <div className='flex underline text-lg hover:cursor-pointer mobile:m-5'>
                     <p>
-                        Objetos seleccionados: 2
+                        Objetos seleccionados: {`${productos.length || 0}`}
                     </p>
                     <p className='ml-5'>
                         Elemento de la lista blanca: 0

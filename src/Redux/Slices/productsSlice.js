@@ -20,7 +20,6 @@ export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', as
 
 export const fetchCustomProducts = createAsyncThunk('products/fetchCustomProducts', async (params) => {
     try {
-        console.log(params)
         const response = await axios.get(`${PRODUCTS_URL}?$limit=25&${params}`)
         return response.data.data
     } catch (err) {
@@ -65,5 +64,9 @@ export const productsSlice = createSlice({
 
 export const selectFetchStatus = (state) => state.products.fetchStatus
 export const selectProductsData = (state) => state.products.productsData
+export const selectSpecificProduct = (state, id) => {
+    const product = state.products.productsData.filter((product) => product.id == id)[0]
+    return product
+}
 
 export default productsSlice.reducer

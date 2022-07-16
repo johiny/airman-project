@@ -5,11 +5,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loader from "./Loader";
 import { useSelector } from "react-redux";
-import { selectFetchStatus } from "../features/products/productsSlice";
+import { selectFetchStatus } from "../Redux/Slices/productsSlice";
 const MainLayout = () => {
   const status = useSelector((state) => selectFetchStatus(state))
   const isUninitialized = status === 'idle'
-    const isLoading = status === 'pending'|| status === 'idle'
+    const isLoading = status === 'pending'
     const isError = status === 'rejected'
     const isSuccess = status === 'fulfilled'
 

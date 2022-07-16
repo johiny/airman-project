@@ -6,23 +6,19 @@ import SearchBar from '../components/SearchBar'
 import ProductLoaderCard from '../Components/ProductLoaderCard'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCustomProducts, selectProductsData, selectFetchStatus } from '../features/products/productsSlice'
-import { useGetAllProducts } from '../hooks/useGetAllProducts'
+import { fetchCustomProducts, selectProductsData} from '../Redux/Slices/productsSlice'
 
 const Resultados = ({className}) => {
      const {query} = useParams()
-    //  const productsData = useGetAllProducts()
-    //  const productos = productsData?.data
      const dispatch = useDispatch()
      const productos = useSelector((state) => selectProductsData(state))
-     const status = useSelector((state) => selectFetchStatus(state))
+
      useEffect(()=> {
-          if(query != undefined && status === "idle")
+          if(query != undefined)
           {
-            console.log(query)
             dispatch(fetchCustomProducts(query))
           }
-     },[query, dispatch, status])
+     },[query, dispatch])
 
   return (
     <div className={className}>

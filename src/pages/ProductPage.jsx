@@ -1,15 +1,15 @@
-import Announce from '../components/Announce';
-import Navbar from "../components/Navbar";
 import Newsletter from '../components/Newsletter';
-import Footer from '../components/Footer';
 import Counter from '../components/Counter';
-
 import React from 'react'
-
-
-
+import { useSelector } from 'react-redux';
+import { selectSpecificProduct } from '../Redux/Slices/productsSlice';
+import { useParams } from 'react-router-dom';
+import { useDispatch } from 'react-redux'; 
+import { add } from "../Redux/Slices/cartSlice"
 const ProductPage = () => {
-
+  const {id} = useParams()
+  const product = useSelector((state) => selectSpecificProduct(state, id))
+  const dispatch = useDispatch()
     // Style img
     const imgStyle = "rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
 
@@ -20,24 +20,21 @@ const ProductPage = () => {
         <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 mb-5">
           <div className="flex-1 flex items-center justify-center">
             <img
-              src="https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-PISTACHIO-2_360x.jpg?v=1642545216"
+              src={product.image}
               className={imgStyle}
               alt="product_image"
             />
           </div>
           <div className="flex-[1.3] flex flex-col items-start  justify-items-center mt-10 mobile:items-center">
             <h1 className="title text-[40px] mobile:text-[30px]">
-                Sudadera Crema Original
+                {product.name}
             </h1>
             <p className=" pr-[4rem] text-justify mt-4 mobile:pr-0">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium
-              accusamus, culpa neque ex sunt placeat. Vitae quia qui quo,
-              doloribus dolore aliquam veniam. Natus totam odit consequatur
-              consectetur delectus nihil!
+              {product.description}
             </p>
             <div className="flex flex-col place-self-start">
               <p className="mt-7 text-3xl">
-                Precio: <b>$70</b>
+                Precio: <b>{product.price}</b>
               </p>
   
               <div className=" flex mt-7 text-2xl">
@@ -62,7 +59,7 @@ const ProductPage = () => {
               </div>
             </div>
   
-            <button className="btn">
+            <button className="btn" onClick={() => dispatch(add(product))}>
               Añadir al carrito
             </button>
           </div>
