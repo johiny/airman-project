@@ -7,16 +7,19 @@ import ProductLoaderCard from '../Components/ProductLoaderCard'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCustomProducts, selectProductsData} from '../Redux/Slices/productsSlice'
+import { fetchAllProducts } from '../Redux/Slices/productsSlice'
 
 const Resultados = ({className}) => {
      const {query} = useParams()
      const dispatch = useDispatch()
      const productos = useSelector((state) => selectProductsData(state))
-
      useEffect(()=> {
           if(query != undefined)
           {
             dispatch(fetchCustomProducts(query))
+          }
+          else{
+            dispatch(fetchAllProducts())
           }
      },[query, dispatch])
 

@@ -4,7 +4,7 @@ import {
     fetchAllProducts,
     selectFetchStatus,
     selectProductsData
-} from '../features/products/productsSlice'
+} from '../Redux/Slices/productsSlice'
 
 export function useGetAllProducts() {
     const dispatch = useDispatch()
