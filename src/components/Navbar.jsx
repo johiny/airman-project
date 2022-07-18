@@ -1,11 +1,16 @@
 import{Badge} from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
-import React from 'react';
+import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom"
 function Navbar() {
 
+    const [query, setQuery] = useState("");
     const style = "text-[14px] cursor-pointer ml-[25px] mobile:ml-[5px]";
     const navigate = useNavigate()
+
+    const handleSubmit = () => {
+        navigate(`/search/name[$like]=*${query}*`)
+    }
 
   return (
     <div className='navbar h-[60px] shadow-md  relative z-10'>
@@ -19,8 +24,8 @@ function Navbar() {
                     border-solid border-lighgrey rounded-md items-center ml-[10px] p-[5px]
                     focus-within:border-[#2A2550] transition-all'>
                     <input className='input outline-none mobile:w-[50px]'
-                    type='text' placeholder="Buscar"/>
-                    <Search className='text-[#2A2550]' style={{fontSize:'16px'}}/>
+                    type='text' placeholder="Buscar" onKeyUp={e => e.key === "Enter" ? handleSubmit() : null} onChange={e => setQuery(e.target.value)} onSubmit={handleSubmit} />
+                    <Search className='text-[#2A2550]' style={{fontSize:'16px'}} onClick={handleSubmit} />
                 </div>
 
             </div>
