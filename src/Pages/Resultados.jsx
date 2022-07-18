@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import ProductCardJ from '../Components/ProductCardJ'
 import ProductsContainer from '../Components/ProductsContainer'
@@ -7,7 +7,6 @@ import ProductLoaderCard from '../Components/ProductLoaderCard'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCustomProducts, selectProductsData} from '../Redux/Slices/productsSlice'
-import { fetchAllProducts } from '../Redux/Slices/productsSlice'
 
 const Resultados = ({className}) => {
      const {query} = useParams()
@@ -17,9 +16,6 @@ const Resultados = ({className}) => {
           if(query != undefined)
           {
             dispatch(fetchCustomProducts(query))
-          }
-          else{
-            dispatch(fetchAllProducts())
           }
      },[query, dispatch])
 
