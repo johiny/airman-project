@@ -24,7 +24,8 @@ function Cart() {
     // Style img
     const imgStyle = "w-[7rem] h-[80%] rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const navigate2 = useNavigate();
 
   return (
     <div>
@@ -35,7 +36,7 @@ function Cart() {
             </div>
 
             <div className='flex item-center justify-between mt-4 mobile:flex-col'>
-                <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white mt-0'>seguir comprando</button>
+                <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white mt-0' onClick={() => navigate2("/search")} >seguir comprando</button>
                 
                 <div className='flex underline text-lg hover:cursor-pointer mobile:m-5'>
                     <p>
