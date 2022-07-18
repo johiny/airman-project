@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Logo from '../Components/Logo'
 import ProductCardJ from '../Components/ProductCardJ'
 import ProductsContainer from '../Components/ProductsContainer'
 import SearchBar from '../components/SearchBar'
 import ProductLoaderCard from '../Components/ProductLoaderCard'
+import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchCustomProducts, selectProductsData} from '../Redux/Slices/productsSlice'
+import { fetchAllProducts } from '../Redux/Slices/productsSlice'
+
 const Resultados = ({className}) => {
-  const [productos,setProductos] = useState([])
-  useEffect(() => {
-    const get_products = async () => {
-      let response = await fetch("https://api-playground-test.herokuapp.com/products?$limit=15")
-      response =  await response.json()
-      setProductos(response.data)
-    }
-    get_products()
-  },[])
+     const {query} = useParams()
+     const dispatch = useDispatch()
+     const productos = useSelector((state) => selectProductsData(state))
+     useEffect(()=> {
+          if(query != undefined)
+          {
+            dispatch(fetchCustomProducts(query))
+          }
+          else{
+            dispatch(fetchAllProducts())
+          }
+     },[query, dispatch])
 
   return (
     <div className={className}>

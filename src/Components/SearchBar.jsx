@@ -1,12 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import magnifyingGlass from '../Media/magnifying-glass-solid.svg'
-
-const SearchBar = ({className}) => {
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+const SearchBar = ({className, setQuery}) => {
+    const [search, setSearch] = useState("")
+    const navigate = useNavigate()
+    const handleSubmit = () => {
+        // setQuery(`name[$like]=*${search}*`)
+        navigate(`/search/name[$like]=*${search}*`)
+    }
   return (
     <div className={className}>
-        <input placeholder='Search'/>
-        <img src={magnifyingGlass}/>
+        <input placeholder='Search' onKeyUp={(e) => e.key === "Enter" ? handleSubmit() : null} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSubmit}/>
+        <img src={magnifyingGlass} onClick={handleSubmit}/>
     </div>  
   )
 }

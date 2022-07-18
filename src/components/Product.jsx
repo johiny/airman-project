@@ -8,13 +8,12 @@ import {
 
   
   const Product = ({ item }) => {
+
+    const navigate = useNavigate()
   
   const [hoverEffects , setHoverEffects]=useState(' opacity-0')
   
   const iconStyle = 'h-[40px] w-[40px] rounded-full bg-white flex items-center justify-center m-3 hover:bg-[#E04D01] hover:text-white hover:scale-[1.1] ease-in duration-100 cursor-pointer'
-  
-  const navigate = useNavigate();
-
 
     function handleHoverEnter() {
       setHoverEffects(' opacity-1 bg-[rgba(0,0,0,0.2)]')

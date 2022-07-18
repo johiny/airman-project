@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import defaultPhoto from '../Media/default_product_photo.png'
+import cat404 from "../Media/404cat.png"
 import { css } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-// to do arreglar overflow de botones
 const ProductCardJ = ({className, price, image, name, id}) => {
     const navigate = useNavigate()
+    const [imgError, setImgError] = useState(false)
   return (
     <div className={className} onClick={() => navigate(`/product/${id}`)}>
-        <img src={image}/>
+        <img src={imgError ? cat404 : image} onError={() => setImgError(true)}/>
         <div>
             <ProductName>{name.substring(0, 33)}</ProductName>
             <button>Add To Cart</button>
