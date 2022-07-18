@@ -1,9 +1,11 @@
 import Newsletter from '../components/Newsletter';
 import React from 'react'
-import Counter from '../components/Counter';
 import { useNavigate } from "react-router-dom"
 import {useSelector} from "react-redux"
 import {selectProductsCart} from "../Redux/Slices/cartSlice"
+import CartProductList from '../components/CartProductList';
+
+
 function Cart() {
     const productos = useSelector((state) => selectProductsCart(state))
     console.log(productos)
@@ -55,127 +57,8 @@ function Cart() {
 
                     {/* List of products div */}
 
-                    {/* 1er Product */}
-                    <div className={divProduct}>
-                        <div className='product flex self-start pl-5'>
-                            <img 
-                            className={imgStyle}
-                            src='https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-HARVEST-2_360x.jpg?v=1642616536'
-                            alt='product_img'
-                            />
-                            <div className={descriptionProduct}>
-                                <p>
-                                    <b className='mr-2'>ID:</b> 987654321
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Producto:</b> Camisa cileo
-                                </p>
-
-                                <p className='flex items-center justify-start'>
-                                    <b className='mr-2'>Color:</b> 
-                                    <div className='rounded-full border-2 p-[10px] cursor-pointer bg-sky-500 ml-1 w-[20px] h-[20px]'>
-                                    </div>
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Talla:</b> Lg
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={priceStyle}>
-                            <Counter/>
-                            <p className='flex items-center justify-center text-4xl mt-3'>
-                                <b>
-                                    $ 70
-                                </b>
-                            </p>
-                        </div>
-                    </div>
-                    <hr className='mt-7 mb-7 mobile:mt-0 '/>
-
-                    {/* 2do Product */}
-                    <div className={divProduct}>
-                        <div className='product flex self-start pl-5'>
-                            <img 
-                            className={imgStyle}
-                            src='https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-HARVEST-2_360x.jpg?v=1642616536'
-                            alt='product_img'
-                            />
-                            <div className={descriptionProduct}>
-                                <p>
-                                    <b className='mr-2'>ID:</b> 987654321
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Producto:</b> Camisa cileo
-                                </p>
-
-                                <p className='flex items-center justify-start'>
-                                    <b className='mr-2'>Color:</b> 
-                                    <div className='rounded-full border-2 p-[10px] cursor-pointer bg-sky-500 ml-1 w-[20px] h-[20px]'>
-                                    </div>
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Talla:</b> Lg
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={priceStyle}>
-                            <Counter/>
-                            <p className='flex items-center justify-center text-4xl mt-3'>
-                                <b>
-                                    $ 70
-                                </b>
-                            </p>
-                        </div>
-                    </div>
-                    <hr className='mt-7 mb-7 mobile:mt-0 '/>
-
-                     {/* 3er Product */}
-                     <div className={divProduct}>
-                        <div className='product flex self-start pl-5'>
-                            <img 
-                            className={imgStyle}
-                            src='https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-HARVEST-2_360x.jpg?v=1642616536'
-                            alt='product_img'
-                            />
-                            <div className={descriptionProduct}>
-                                <p>
-                                    <b className='mr-2'>ID:</b> 987654321
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Producto:</b> Camisa cileo
-                                </p>
-
-                                <p className='flex items-center justify-start'>
-                                    <b className='mr-2'>Color:</b> 
-                                    <div className='rounded-full border-2 p-[10px] cursor-pointer bg-sky-500 ml-1 w-[20px] h-[20px]'>
-                                    </div>
-                                </p>
-
-                                <p>
-                                    <b className='mr-2'>Talla:</b> Lg
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className={priceStyle}>
-                            <Counter/>
-                            <p className='flex items-center justify-center text-4xl mt-3'>
-                                <b>
-                                    $ 70
-                                </b>
-                            </p>
-                        </div>
-                    </div>
-                    <hr className='mt-7 mb-7 mobile:mt-0'/>
-
-
+                    <CartProductList/>
+                    
                 </div>
                 
                 <div className=' p-5 flex-[0.4] w-auto h-[40vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6'>
