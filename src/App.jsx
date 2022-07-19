@@ -12,6 +12,7 @@ import Resultados from './Pages/Resultados'
 import DataForm from './views/DataForm'
 import MainLayout from './components/MainLayout';
 import Confirmation from './Pages/Confirmation';
+import Processing from './Pages/Processing';
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
             <Route path='purchaseForm' element={<DataForm/>} />
             <Route path='register' element={<Register/>}/>
             <Route path='login' element={<Login/>}/>
+            <Route path='processing' element={<Processing/>}/>
         </Route>
         <Route path='/confirmation/:confirmatioState' element={<Confirmation/>}/>
     </WebRoutes>

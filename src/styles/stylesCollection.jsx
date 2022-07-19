@@ -30,6 +30,36 @@ const DataSection = styled.section`
   }
 `;
 
+const DataSectionSmall = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  min-height: 100vh;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  h1 {
+    font-weight: bold;
+  }
+
+  button:hover {
+    background-color: #e76525;
+  }
+
+  @media screen and (min-width: 640px) {
+    width: 20vw;
+    min-height: 50vh;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 0.5rem #000;
+    margin-top: 2.5rem;
+  }
+`;
+
 const FormArticles = styled.article`
   width: 80vw;
   display: flex;
@@ -79,6 +109,7 @@ const FormButton = styled.button`
 
 export {
     DataSection,
+    DataSectionSmall,
     FormArticles,
     FormButtons,
     FormButton
