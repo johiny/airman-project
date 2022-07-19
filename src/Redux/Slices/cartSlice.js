@@ -21,16 +21,39 @@ const advanceAdd = (products, newProduct) => {
     return [...products, {...newProduct, quantity : 1}]
 }
 
+const advanceRemove = (products, id) => {
+    
+    for ( let i = 0; i < products.length; i++)
+    {
+        if(products[i].id == id)
+        {
+            if(products[i].quantity > 1){
+                let productsCopy = Array.from(products)
+                productsCopy[i].quantity -= 1 
+                return productsCopy
+            }
+            else{
+                return products.filter(product => product.id != id)
+            }
+        }  
+    }
+
+}
+
 const Cart = createSlice({
     name: "cart",
     initialState,
     reducers: {
         add(state, action){
-
+            state.status = "adding"
             state.data = advanceAdd(state.data, action.payload)
+            state.status = "idle"
         },
         remove(state, action){
-            state.data = state.date.filter((product) => product.id != action.payload)
+            state.data = advanceRemove(state.data, action.payload)
+        },
+        error(state, action){
+            state.error = action.payload
         }
     }
 
