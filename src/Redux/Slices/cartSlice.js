@@ -13,7 +13,7 @@ const advanceAdd = (products, newProduct) => {
         if(products[i].id == newProduct.id)
         {
             let productsCopy = Array.from(products)
-            productsCopy[i].quantity += 1 
+            productsCopy[i].quantity += 1
             return productsCopy
         }  
     }
@@ -50,11 +50,10 @@ const Cart = createSlice({
             state.status = "idle"
         },
         remove(state, action){
+            state.status = "removing"
             state.data = advanceRemove(state.data, action.payload)
+            state.status = "idle"
         },
-        error(state, action){
-            state.error = action.payload
-        }
     }
 
 })
