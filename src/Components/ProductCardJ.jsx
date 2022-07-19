@@ -3,16 +3,22 @@ import styled from 'styled-components'
 import cat404 from "../Media/404cat.png"
 import { css } from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-const ProductCardJ = ({className, price, image, name, id}) => {
+import { useDispatch } from 'react-redux'
+import {add} from "../Redux/Slices/cartSlice"
+const ProductCardJ = ({producto, className}) => {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const [imgError, setImgError] = useState(false)
   return (
-    <div className={className} onClick={() => navigate(`/product/${id}`)}>
-        <img src={imgError ? cat404 : image} onError={() => setImgError(true)}/>
+    <div className={className} onClick={() => navigate(`/product/${producto.id}`)}>
+        <img src={imgError ? cat404 : producto.image} onError={() => setImgError(true)}/>
         <div>
-            <ProductName>{name.substring(0, 33)}</ProductName>
-            <button>Add To Cart</button>
-            <NormalPrice>${price}</NormalPrice>
+            <ProductName>{producto.name.substring(0, 33)}</ProductName>
+            <button onClick={(e) => {
+                dispatch(add(producto))
+                e.stopPropagation()}}>
+                Add To Cart</button>
+            <NormalPrice>${producto.price}</NormalPrice>
             <DiscountPrice>$0000</DiscountPrice>
         </div>
     </div>

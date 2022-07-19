@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom"
 import {useSelector} from "react-redux"
 import {selectProductsCart} from "../Redux/Slices/cartSlice"
 import CartProductList from '../components/CartProductList';
-
-
+import CartRowTest from "../components/cartRowTest"
 function Cart() {
-    const productos = useSelector((state) => selectProductsCart(state))
+    const productos = useSelector(selectProductsCart)
     console.log(productos)
     // Margin Resumen
     const resumenStyle="flex justify-between mt-3 w-[100%]";
@@ -58,9 +57,8 @@ function Cart() {
                     {/* List of products div */}
 
                     <CartProductList/>
-                    
-                </div>
-                
+                    {productos.map((producto) => <CartRowTest producto={producto}/>)}
+                </div>   
                 <div className=' p-5 flex-[0.4] w-auto h-[40vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6'>
                     <h1 className='text-[2rem]'>Resumen</h1>
 
