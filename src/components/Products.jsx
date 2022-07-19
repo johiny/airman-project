@@ -8,7 +8,7 @@ import Product from './Product';
 function Products() {
 
     const dispatch = useDispatch()
-    const data = useSelector(state => selectProductsData(state))
+    const data = useSelector(selectProductsData)
 
     useEffect(() => {
       dispatch(fetchAllProducts())

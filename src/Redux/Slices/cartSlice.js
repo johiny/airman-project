@@ -59,5 +59,10 @@ const Cart = createSlice({
 })
 
 export const selectProductsCart = (state) => state.cart.data
+export const selectQuantityOfProductsInCart = (state) => {
+    let number = 0
+    state.cart.data.forEach((product) => number += product.quantity)
+    return number
+}
 export const { add , remove } = Cart.actions
 export default Cart.reducer

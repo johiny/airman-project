@@ -2,12 +2,14 @@ import{Badge} from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom"
+import {useSelector} from "react-redux"
+import {selectQuantityOfProductsInCart} from "../Redux/Slices/cartSlice"
 function Navbar() {
 
     const [query, setQuery] = useState("");
     const style = "text-[14px] cursor-pointer ml-[25px] mobile:ml-[5px]";
     const navigate = useNavigate();
-    const navigate2 = useNavigate();
+    const productsInCart = useSelector(selectQuantityOfProductsInCart)
 
     const handleSubmit = () => {
         navigate(`/search/name[$like]=*${query}*`)
@@ -46,7 +48,7 @@ function Navbar() {
                 </div> */}
 
                 <div className={style} onClick={() => navigate("/cart")}>
-                    <Badge badgeContent={2} color='primary'>
+                    <Badge badgeContent={productsInCart} color='primary'>
                         <ShoppingCartOutlined/>
                     </Badge>
                 </div>

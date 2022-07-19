@@ -24,7 +24,7 @@ const Resultados = ({className}) => {
     <SearchBar/>
     <ProductsContainer>
     {productos.map((producto) => {
-      return <ProductCardJ key={producto.id} name={producto.name} price={producto.price} image={producto.image} id={producto.id}/>
+      return <ProductCardJ producto={producto} key={producto.id}/>
     } )}
     {productos.length > 0 ? <ProductLoaderCard/> : null}
     </ProductsContainer>

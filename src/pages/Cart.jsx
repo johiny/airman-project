@@ -6,7 +6,7 @@ import {selectProductsCart} from "../Redux/Slices/cartSlice"
 import CartProductList from '../components/CartProductList';
 import CartRowTest from "../components/cartRowTest"
 function Cart() {
-    const productos = useSelector((state) => selectProductsCart(state))
+    const productos = useSelector(selectProductsCart)
     console.log(productos)
     // Margin Resumen
     const resumenStyle="flex justify-between mt-3 w-[100%]";
