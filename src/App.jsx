@@ -1,17 +1,18 @@
 import './index.css'
 import WebRoutes from './components/WebRoutes';
 import {Route, BrowserRouter} from "react-router-dom"
-import CategoryPage from "./pages/CategoryPage";
-import Home from "./pages/Home";
-import ProductPage from "./pages/ProductPage";
+import CategoryPage from "./Pages/CategoryPage";
+import Home from "./Pages/Home";
+import ProductPage from "./Pages/ProductPage";
 import ProductPage2 from './views/ProductPage';
-import Cart from "./pages/Cart";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Cart from "./Pages/Cart";
+import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 import Resultados from './Pages/Resultados'
 import DataForm from './views/DataForm'
 import MainLayout from './components/MainLayout';
 import Confirmation from './Pages/Confirmation';
+import Processing from './Pages/Processing';
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
             <Route path='purchaseForm' element={<DataForm/>} />
             <Route path='register' element={<Register/>}/>
             <Route path='login' element={<Login/>}/>
+            <Route path='processing' element={<Processing/>}/>
         </Route>
         <Route path='/confirmation/:confirmatioState' element={<Confirmation/>}/>
     </WebRoutes>

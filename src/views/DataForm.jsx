@@ -8,8 +8,7 @@ import {useNavigate} from "react-router-dom"
 const regex = /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u
 
 const handleSubmit = (values, callback) => {
-  console.log(values);
-  callback("/confirmation/success")
+  callback("/processing")
 };
 
 const dataFormSchema = Yup.object({
