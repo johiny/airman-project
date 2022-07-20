@@ -13,12 +13,13 @@ const advanceAdd = (products, newProduct) => {
         if(products[i].id == newProduct.id)
         {
             let productsCopy = Array.from(products)
-            productsCopy[i].quantity += 1
+            productsCopy[i].quantity += newProduct.addQuantity || 1
             return productsCopy
         }  
     }
-
-    return [...products, {...newProduct, quantity : newProduct.quantity || 1}]
+    const productToAdd = {...newProduct, quantity : newProduct.addQuantity || 1}
+    delete productToAdd.addQuantity
+    return [...products, productToAdd]
 }
 
 const advanceRemove = (products, id) => {
