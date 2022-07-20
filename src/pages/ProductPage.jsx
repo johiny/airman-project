@@ -1,6 +1,6 @@
 import Newsletter from '../components/Newsletter';
 import Counter from '../components/Counter';
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { selectSpecificProduct } from '../Redux/Slices/productsSlice';
 import { useParams } from 'react-router-dom';
@@ -10,10 +10,9 @@ const ProductPage = () => {
   const {id} = useParams()
   const product = useSelector((state) => selectSpecificProduct(state, id))
   const dispatch = useDispatch()
+  const [quantity, setQuantity] = useState(1)
     // Style img
     const imgStyle = "rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
-
-  
 
     return (
       <div>
@@ -39,7 +38,7 @@ const ProductPage = () => {
   
              
               <div className="mt-7">
-                <Counter />
+                <Counter quantity={quantity} setQuantity={setQuantity}/>
               </div>
             </div>
   
