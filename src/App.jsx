@@ -30,7 +30,7 @@ function App() {
             <Route path='login' element={<Login/>}/>
             <Route path='processing' element={<Processing/>}/>
         </Route>
-        <Route path='/confirmation/:confirmatioState' element={<Confirmation/>}/>
+        <Route path='/confirmation/:confirmationState' element={<Confirmation/>}/>
     </WebRoutes>
     </BrowserRouter>
   )

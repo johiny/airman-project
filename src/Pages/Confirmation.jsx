@@ -1,14 +1,29 @@
 import React from 'react'
 import styled from "styled-components"
 import { css } from 'styled-components'
+import { useParams } from 'react-router-dom'
+import { useTimeoutFn } from "react-use";
+import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useCountDown from "../hooks/useCountDown"
 const Confirmation = ({className}) => {
+    const {confirmationState} = useParams()
+    const navigate = useNavigate()
+    const counter = useCountDown(3)
+    useEffect(() => {
+        if(counter <= 0){
+            navigate(confirmationState == "success" ? `/` : `/purchaseForm`)
+        }
+    },[counter])
+    
   return (
     <div className={className}>
         <ConfirmationBox>
-            <ConfirmationTitle>La compra ha sido exitosa</ConfirmationTitle>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste eveniet consectetur aliquam impedit fugiat illum praesentium inventore esse assumenda odio aspernatur maxime cum, quis delectus. Minus commodi doloribus tempora quas?</p>
+            <ConfirmationTitle>{ confirmationState == "success" ? "La compra ha sido exitosa" : "Ha ocurrido un problema"}</ConfirmationTitle>
+            <p>{confirmationState == "success" ? "Gracias por comprar en Airman-Project! una copia de la orden fue enviada a tu correo." :
+            "Parece que ha ocurrido un problema al momento de finalizar la transacción, revisa tu metodo de pago y vuelve a intentarlo."}</p>
             <RedirectionMessage>
-                Seras redirigido a la pagina principal en 3...
+                Seras redirigido a {confirmationState == "success" ? "la pagina principal" : "al formulario de pago"} en {counter}...
             </RedirectionMessage>
         </ConfirmationBox>    
     </div>
