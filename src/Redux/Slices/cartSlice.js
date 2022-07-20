@@ -18,7 +18,7 @@ const advanceAdd = (products, newProduct) => {
         }  
     }
 
-    return [...products, {...newProduct, quantity : 1}]
+    return [...products, {...newProduct, quantity : newProduct.quantity || 1}]
 }
 
 const advanceRemove = (products, id) => {

@@ -42,7 +42,7 @@ const ProductPage = () => {
               </div>
             </div>
   
-            <button className="btn mt-7" onClick={() => dispatch(add(product))}>
+            <button className="btn mt-7" onClick={() => dispatch(add({...product, quantity : quantity}))}>
               Añadir al carrito
             </button>
           </div>
