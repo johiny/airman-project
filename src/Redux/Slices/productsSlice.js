@@ -27,6 +27,15 @@ export const fetchCustomProducts = createAsyncThunk('products/fetchCustomProduct
     }
 })
 
+export const fetchSingleProduct = createAsyncThunk('products/fetchSingleProduct', async (id) => {
+    try {
+        const response = await axios.get(`${PRODUCTS_URL}/${id}`)
+        return response.data
+    } catch (err) {
+        return err.message        
+    }
+})
+
 
 export const productsSlice = createSlice({
     name: "products",
@@ -56,6 +65,20 @@ export const productsSlice = createSlice({
         })
 
         builder.addCase(fetchCustomProducts.rejected, (state, action) => {
+            state.fetchStatus = 'rejected'
+            state.error = action.error.message
+        })
+
+        builder.addCase(fetchSingleProduct.pending, (state, action) => {
+            state.fetchStatus = 'pending'
+        })
+
+        builder.addCase(fetchSingleProduct.fulfilled, (state, action) => {
+            state.fetchStatus = 'fulfilled'
+            state.productsData = [action.payload]
+        })
+
+        builder.addCase(fetchSingleProduct.rejected, (state, action) => {
             state.fetchStatus = 'rejected'
             state.error = action.error.message
         })

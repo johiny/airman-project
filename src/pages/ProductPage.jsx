@@ -6,10 +6,16 @@ import { selectSpecificProduct } from '../Redux/Slices/productsSlice';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux'; 
 import { add } from "../Redux/Slices/cartSlice"
+import { fetchSingleProduct} from '../Redux/Slices/productsSlice';
 const ProductPage = () => {
   const {id} = useParams()
   const product = useSelector((state) => selectSpecificProduct(state, id))
   const dispatch = useDispatch()
+  useEffect(() => {
+    if(product == undefined){
+      dispatch(fetchSingleProduct(id))
+    } 
+  },[])
   const [quantity, setQuantity] = useState(1)
 
   // manejo de numero negativos
@@ -23,7 +29,9 @@ const ProductPage = () => {
     const imgStyle = "rounded-lg shadow-lg hover:scale-[1.1] esase-in duration-300";
 
     return (
-      <div>
+        <>
+        {product == undefined ? null :
+        <div>
         <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 mb-5">
           <div className="flex-1 flex items-center justify-center">
             <img
@@ -37,11 +45,11 @@ const ProductPage = () => {
                 {product.name}
             </h1>
             <p className=" pr-[4rem] text-justify mt-7 mobile:pr-0">
-              {product.description}
+              {product.description }
             </p>
             <div className="flex flex-col place-self-start mt-4">
               <p className="mt-7 mb-4 text-3xl">
-                Precio: <b>{product.price}</b>
+                Precio: <b>{product.price }</b>
               </p>
   
              
@@ -56,7 +64,9 @@ const ProductPage = () => {
           </div>
         </div>
         <Newsletter />
-      </div>
+        </div>
+}
+      </>
     );
   };
 
