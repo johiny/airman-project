@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllProducts, selectProductsData } from '../Redux/Slices/productsSlice';
+import { fetchCustomProducts, selectProductsData } from '../Redux/Slices/productsSlice';
 import Product from './Product';
 
 
@@ -11,7 +11,7 @@ function Products() {
     const data = useSelector(selectProductsData)
 
     useEffect(() => {
-      dispatch(fetchAllProducts())
+      dispatch(fetchCustomProducts(`name[$like]=*t-shirt*`))
     }, []);
 
     return <div className='flex flex-wrap p-5 '>

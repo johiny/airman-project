@@ -1,15 +1,16 @@
 import {
     FavoriteBorderOutlined,
     SearchOutlined,
-    ShoppingCartOutlined,
+    ShoppingCartOutlined
   } from "@material-ui/icons";
-  import React, {useState} from "react";
-  import { useNavigate } from "react-router-dom";
-
+import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { add } from "../Redux/Slices/cartSlice";
   
-  const Product = ({ item }) => {
-
-    const navigate = useNavigate()
+const Product = ({ item }) => {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
   
   const [hoverEffects , setHoverEffects]=useState(' opacity-0')
   
@@ -27,13 +28,13 @@ import {
         <img src={item.image} alt="product" />
         <div className={`flex items-center justify-center absolute w-[100%] h-[100%] ease-in duration-100` + hoverEffects}>
           <div className={iconStyle}>
-            <ShoppingCartOutlined />
+            <ShoppingCartOutlined onClick={() => dispatch(add(item))} />
           </div>
           <div className={iconStyle}>
             <FavoriteBorderOutlined />
           </div>
           <div className={iconStyle}>
-            <SearchOutlined onClick={() => navigate("product/:id")} />
+            <SearchOutlined onClick={() => navigate(`product/${item.id}`)} />
           </div>
         </div>
       </div>
