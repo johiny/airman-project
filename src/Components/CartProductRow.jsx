@@ -1,12 +1,10 @@
 import React from 'react';
-import Counter from '../components/Counter';
-import { useNavigate } from "react-router-dom";
-import {useSelector} from "react-redux";
-import {selectProductsCart} from "../Redux/Slices/cartSlice";
-
-
-function CartProductList() {
-
+import Counter from './Counter';
+import error404 from "../Media/404cat.png"
+import { useState } from 'react';
+import CartCounter from './CartCounter';
+function CartProductRow({producto}) {
+    const [image, setImage] = useState(producto.image)
     // Product Div Style
     const divProduct="flex w-[100%] h-auto items-center mobile:flex-col";
 
@@ -29,35 +27,32 @@ function CartProductList() {
             <div className='product flex self-start pl-5'>
                 <img 
                 className={imgStyle}
-                src='https://cdn.shopify.com/s/files/1/0240/7285/products/KNITPULLOVER-HARVEST-2_360x.jpg?v=1642616536'
+                src={image}
                 alt='product_img'
+                onError={() => setImage(error404)}
                 />
                 <div className={descriptionProduct}>
                     <p>
-                        <b className='mr-2'>ID:</b> 987654321
+                        <b className='mr-2'>ID:</b> {producto.id}
                     </p>
 
-                    <p>
-                        <b className='mr-2'>Producto:</b> Camisa cileo
+                    <p className='max-w-xs'>
+                        <b className='mr-2'>Producto:</b> {producto.name}
                     </p>
-
                 </div>
-
             </div>
-
             <div className={priceStyle}>
-                <Counter/>
+                <CartCounter producto={producto}/>
                 <p className='flex items-center justify-center text-4xl mt-3'>
                     <b>
-                        $ 70
+                        {producto.price}
                     </b>
                 </p>
             </div>
         </div>
         <hr className={linearDiv} />
-
     </div>
   )
 }
 
-export default CartProductList
+export default CartProductRow
