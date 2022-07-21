@@ -45,7 +45,7 @@ function CartProductRow({producto}) {
                 <CartCounter producto={producto}/>
                 <p className='flex items-center justify-center text-4xl mt-3'>
                     <b>
-                        {producto.price}
+                        {producto.price * producto.quantity}
                     </b>
                 </p>
             </div>
