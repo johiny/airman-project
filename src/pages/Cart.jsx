@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom"
 import {useSelector} from "react-redux"
 import {selectProductsCart, selectQuantityOfProductsInCart} from "../Redux/Slices/cartSlice"
 import CartProductRow from '../components/CartProductRow';
+import CartResumenWindow from '../components/CartResumenWindow';
 function Cart() {
     const productos = useSelector(selectProductsCart)
     const totalQuantity = useSelector(selectQuantityOfProductsInCart)
-    // Margin Resumen
-    const resumenStyle="flex justify-between mt-3 w-[100%]";
 
     // Product Div Style
     const divProduct ="flex w-[100%] h-auto items-center mobile:flex-col";
@@ -43,30 +42,11 @@ function Cart() {
 
             {/* Central Div */}
             <div className='flex flex-row mt-7 mobile:flex-col'>
-
                 <div className='flex flex-col flex-1 '>
                     {/* List of products*/}
-                    {productos.map((producto) => <CartProductRow producto={producto}/>)}
-                </div>   
-                <div className=' p-5 flex-[0.4] w-auto h-[40vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6'>
-                    <h1 className='text-[2rem]'>Resumen</h1>
-                    <div className={resumenStyle}>
-                        <p>Subtotal</p>
-                        <p>$150</p>
-                    </div>
-                    <div className={resumenStyle}>
-                        <p>Envio</p>
-                        <p>$40</p>
-                    </div>
-                    <div className={resumenStyle}>
-                        <p>Descuento de Envio</p>
-                        <p>-$10</p>
-                    </div>
-                    <div className={resumenStyle + ` text-3xl font-bold`}>
-                        <p>Total</p>
-                        <p>$150</p>
-                    </div>
+                    {productos.map((producto) => <CartProductRow producto={producto} key={producto.id}/>)}
                 </div>
+                <CartResumenWindow/>
             </div>
         </div>
         <Newsletter/>

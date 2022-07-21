@@ -1,9 +1,11 @@
+import { Store } from "@material-ui/icons";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     data : [],
     status: "idle",
-    error: null
+    error: null,
+    storeDiscount: 0.2
 }
 
 const advanceAdd = (products, newProduct) => {
@@ -60,10 +62,21 @@ const Cart = createSlice({
 })
 
 export const selectProductsCart = (state) => state.cart.data
+export const selectStoreDiscount = (state) => state.cart.storeDiscount
 export const selectQuantityOfProductsInCart = (state) => {
     let number = 0
     state.cart.data.forEach((product) => number += product.quantity)
     return number
+}
+export const selectTotalPriceOfProductsInCart = (state) => {
+    let total = 0
+    state.cart.data.forEach((product) => total += product.price * product.quantity)
+    return total
+}
+export const selectShippingPrice = (state) => {
+    let shippingPrice = 0
+    state.cart.data.forEach((product) => shippingPrice += 0.50 * product.quantity)
+    return shippingPrice
 }
 export const { add , remove } = Cart.actions
 export default Cart.reducer

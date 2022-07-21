@@ -91,10 +91,4 @@ export const selectSpecificProduct = (state, id) => {
     const product = state.products.productsData.filter((product) => product.id == id)[0]
     return product
 }
-export const selectTotalQuantityOfProducts = (state) => {
-    let totalQuantity = 0
-    state.products.productsData.forEaach((product) => totalQuantity += product.quantity)
-    return totalQuantity
-}
-
 export default productsSlice.reducer
