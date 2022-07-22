@@ -5,10 +5,11 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Loader from "./Loader";
 import { useSelector } from "react-redux";
-import { selectFetchStatus } from "../Redux/Slices/productsSlice";
+import { selectFetchStatus, selectTotalProductsInStore } from "../Redux/Slices/productsSlice";
 const MainLayout = () => {
   const status = useSelector((state) => selectFetchStatus(state))
-    const isLoading = status === 'pending'
+  const productsInStore = useSelector(selectTotalProductsInStore)
+    const isLoading = status === 'pending' || 'idle'
     const isError = status === 'rejected'
 
   return (
@@ -17,7 +18,7 @@ const MainLayout = () => {
         <>Oh no, there was an error</>
       ) : (
         <>
-        {isLoading ? <Loader/> : null}
+        {isLoading && productsInStore <= 0 ? <Loader/> : null}
           <Announce />
           <Navbar />
           <Outlet />

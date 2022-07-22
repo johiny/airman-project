@@ -5,6 +5,7 @@ const PRODUCTS_URL = "https://api-playground-test.herokuapp.com/products"
 
 const initialState = {
     productsData: [],
+    totalProductsCurrentQuery: 0,
     fetchStatus: 'idle',
     error: null
 }
@@ -12,7 +13,7 @@ const initialState = {
 export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () => {
     try {
         const response = await axios.get(`${PRODUCTS_URL}?$limit=25`)
-        return response.data.data
+        return response.data
     } catch (err) {
         return err.message        
     }
@@ -21,7 +22,16 @@ export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', as
 export const fetchCustomProducts = createAsyncThunk('products/fetchCustomProducts', async (params) => {
     try {
         const response = await axios.get(`${PRODUCTS_URL}?$limit=25&${params}`)
-        return response.data.data
+        return response.data
+    } catch (err) {
+        return err.message        
+    }
+})
+
+export const fetchMoreProducts = createAsyncThunk('products/fetchMoreProducts', async (params) => {
+    try {
+        const response = await axios.get(`${PRODUCTS_URL}?$limit=25&${params}`)
+        return response.data
     } catch (err) {
         return err.message        
     }
@@ -48,7 +58,8 @@ export const productsSlice = createSlice({
 
         builder.addCase(fetchAllProducts.fulfilled, (state, action) => {
             state.fetchStatus = 'fulfilled'
-            state.productsData = action.payload
+            state.productsData = action.payload.data
+            state.totalProductsCurrentQuery = action.payload.total
         })
 
         builder.addCase(fetchAllProducts.rejected, (state, action) => {
@@ -61,10 +72,25 @@ export const productsSlice = createSlice({
 
         builder.addCase(fetchCustomProducts.fulfilled, (state, action) => {
             state.fetchStatus = 'fulfilled'
-            state.productsData = action.payload
+            state.productsData = action.payload.data
+            state.totalProductsCurrentQuery = action.payload.total
         })
 
         builder.addCase(fetchCustomProducts.rejected, (state, action) => {
+            state.fetchStatus = 'rejected'
+            state.error = action.error.message
+        })
+
+        builder.addCase(fetchMoreProducts.pending, (state, action) => {
+            state.fetchStatus = 'pending'
+        })
+
+        builder.addCase(fetchMoreProducts.fulfilled, (state, action) => {
+            state.fetchStatus = 'fulfilled'
+            state.productsData = [...state.productsData, ...action.payload.data]
+        })
+
+        builder.addCase(fetchMoreProducts.rejected, (state, action) => {
             state.fetchStatus = 'rejected'
             state.error = action.error.message
         })
@@ -87,6 +113,12 @@ export const productsSlice = createSlice({
 
 export const selectFetchStatus = (state) => state.products.fetchStatus
 export const selectProductsData = (state) => state.products.productsData
+export const selectTotalProductsCurrentQuery = (state) => state.products.totalProductsCurrentQuery
+export const selectTotalProductsInStore = (state) => {
+    let total = 0;
+    state.products.productsData.forEach(() => total++ )
+    return total
+}
 export const selectSpecificProduct = (state, id) => {
     const product = state.products.productsData.filter((product) => product.id == id)[0]
     return product

@@ -2,18 +2,26 @@ import React, {useRef,useEffect} from 'react'
 import styled from 'styled-components'
 import LoadingJ from './LoadingJ'
 import { useIntersection } from 'react-use'
-const ProductLoaderCard = ({className}) => {
+import { useSelector } from 'react-redux'
+import { selectTotalProductsCurrentQuery, selectTotalProductsInStore, fetchMoreProducts } from '../Redux/Slices/productsSlice'
+import { useDispatch } from 'react-redux'
+
+const ProductLoaderCard = ({className, query}) => {
+  const productsStore = useSelector(selectTotalProductsInStore)
+  const productsApi = useSelector(selectTotalProductsCurrentQuery)
   const cardLoaderRef = useRef(null)
+  const dispatch = useDispatch()
   const intersection = useIntersection(cardLoaderRef, {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
   })
   useEffect(() => {
-    if(intersection?.isIntersecting){
-      alert("Funciona!")
+    if(intersection?.isIntersecting && productsStore < productsApi){
+      dispatch(fetchMoreProducts(`${query || ""}&$skip=${productsStore}`))
     }
-  },[intersection?.isIntersecting])
+  },[intersection?.isIntersecting, productsStore, productsApi])
+
   return (
     <div className={className} ref={cardLoaderRef}>
 		<LoadingJ/>

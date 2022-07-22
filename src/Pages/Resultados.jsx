@@ -28,7 +28,7 @@ const Resultados = ({className}) => {
     {productos.map((producto) => {
       return <ProductCardJ producto={producto} key={producto.id}/>
     } )}
-    {productos.length > 0 ? <ProductLoaderCard/> : null}
+    {productos.length > 0 ? <ProductLoaderCard query={query}/> : null}
     </ProductsContainer>
     </div>
   )
