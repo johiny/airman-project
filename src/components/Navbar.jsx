@@ -35,7 +35,7 @@ function Navbar() {
 
             {/* Logo */}
             <div className='center flex-1 text-center mobile:ml-6' onClick={() => navigate("/")}>
-                <div className='logo font-bold text-lg mobile:text-sm'><button class="border-solid border border-slate-400">AIRMAN-PROJECT</button></div>
+                <div className='logo font-bold text-lg mobile:text-sm'><button className="border-solid border border-slate-400">AIRMAN-PROJECT</button></div>
             </div>
             
             {/* Right Div */}
@@ -48,7 +48,7 @@ function Navbar() {
                 </div> */}
 
                 <div className={style} onClick={() => navigate("/cart")}>
-                    <Badge badgeContent={productsInCart} color='primary'>
+                    <Badge overlap="rectangular" badgeContent={productsInCart} color='primary'>
                         <ShoppingCartOutlined/>
                     </Badge>
                 </div>
