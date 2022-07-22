@@ -48,7 +48,7 @@ function Slider() {
             {slides.map((slide, index) => {
                 if (index === activeSlide) {
                     return(
-                        <div className={`wrapper flex w-[100%] h-[500px] items-center justify-center shadow-2xl rounded-lg border-[#c0c0c0] border-10px overflow-hidden relative` + slide.background}>
+                        <div className={`wrapper flex w-[100%] h-[500px] items-center justify-center shadow-2xl rounded-lg border-[#c0c0c0] border-10px overflow-hidden relative` + slide.background} key={index} >
                             <div className="slide flex items-center justify-center h-[100%]">
                                 <div className="forImage flex flex-1 justify-center items-center h-[100%]">
                                     <img
