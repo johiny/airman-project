@@ -13,13 +13,12 @@ const ProductCardJ = ({producto, className}) => {
     <div className={className} onClick={() => navigate(`/product/${producto.id}`)}>
         <img src={imgError ? cat404 : producto.image} onError={() => setImgError(true)}/>
         <div>
-            <ProductName>{producto.name.substring(0, 33)}</ProductName>
+            <ProductName>{producto.name}</ProductName>
             <button onClick={(e) => {
                 dispatch(add(producto))
                 e.stopPropagation()}}>
                 Add To Cart</button>
             <NormalPrice>${producto.price}</NormalPrice>
-            <DiscountPrice>$0000</DiscountPrice>
         </div>
     </div>
   )
@@ -37,9 +36,10 @@ const PriceStyle = css`
 `
 const NormalPrice = styled.span`
     ${PriceStyle}
-    color: rgba(0, 0, 0, 0.2);
+    color: #2A2550; 
     align-self: end;
     margin-right: 2vh;
+    align-self: flex-start;
 `
 const DiscountPrice = styled.span`
     ${PriceStyle}
@@ -48,11 +48,13 @@ const DiscountPrice = styled.span`
 const ProductName = styled.span`
     ${PriceStyle}
     font-size: 1.4vh;
-    margin-right: 0;
-    margin-left: 1vh;
+    margin-right: auto;
+    margin-left: auto;
     color: #2A2550;
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/1;
+    text-align: center;
+    align-self: center;
 `
 
 export default styled(ProductCardJ)`
