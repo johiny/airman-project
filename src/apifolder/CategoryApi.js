@@ -1,15 +1,18 @@
 const ApiCategories =[
     {
-        title : 'Jeans',
-        src : 'https://images.pexels.com/photos/1082529/pexels-photo-1082529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title : 'TVs',
+        src : 'https://images.pexels.com/photos/1201996/pexels-photo-1201996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        query: "category.id=abcat0101000"
     },
     {
-        title: 'Jackets',
-        src : 'https://images.pexels.com/photos/6770028/pexels-photo-6770028.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        title: 'Dektop Accesories',
+        src : 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        query: "category.id=abcat0500000"
     },
     {
-        title: 'Style Tee Shirts',
-        src : 'https://images.pexels.com/photos/8346230/pexels-photo-8346230.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+        title: 'VideoGames',
+        src : 'https://images.pexels.com/photos/209679/pexels-photo-209679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+        query: "category.id=abcat0700000"
     }
 ]
 

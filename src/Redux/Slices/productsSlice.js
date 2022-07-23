@@ -7,7 +7,8 @@ const initialState = {
     productsData: [],
     totalProductsCurrentQuery: 0,
     fetchStatus: 'idle',
-    error: null
+    error: null,
+    firstFetch : true
 }
 
 export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () => {
@@ -68,6 +69,7 @@ export const productsSlice = createSlice({
         })
         builder.addCase(fetchCustomProducts.pending, (state, action) => {
             state.fetchStatus = 'pending'
+            state.productsData = []
         })
 
         builder.addCase(fetchCustomProducts.fulfilled, (state, action) => {
@@ -87,6 +89,7 @@ export const productsSlice = createSlice({
 
         builder.addCase(fetchMoreProducts.fulfilled, (state, action) => {
             state.fetchStatus = 'fulfilled'
+            state.firstFetch = false
             state.productsData = [...state.productsData, ...action.payload.data]
         })
 
@@ -114,6 +117,7 @@ export const productsSlice = createSlice({
 export const selectFetchStatus = (state) => state.products.fetchStatus
 export const selectProductsData = (state) => state.products.productsData
 export const selectTotalProductsCurrentQuery = (state) => state.products.totalProductsCurrentQuery
+export const selectIsFirstFetch = (state) => state.products.firstFetch
 export const selectTotalProductsInStore = (state) => {
     let total = 0;
     state.products.productsData.forEach(() => total++ )
