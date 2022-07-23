@@ -3,11 +3,14 @@ import styled from 'styled-components'
 import magnifyingGlass from '../Media/magnifying-glass-solid.svg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-const SearchBar = ({className, setQuery}) => {
+import { useDispatch } from 'react-redux'
+import { fetchCustomProducts } from '../Redux/Slices/productsSlice'
+const SearchBar = ({className}) => {
     const [search, setSearch] = useState("")
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const handleSubmit = () => {
-        // setQuery(`name[$like]=*${search}*`)
+        dispatch(fetchCustomProducts(`name[$like]=*${search}*`))
         navigate(`/search/name[$like]=*${search}*`)
     }
   return (

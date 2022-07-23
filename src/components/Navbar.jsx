@@ -4,14 +4,19 @@ import React, { useState } from 'react';
 import {useNavigate} from "react-router-dom"
 import {useSelector} from "react-redux"
 import {selectQuantityOfProductsInCart} from "../Redux/Slices/cartSlice"
+import { useDispatch } from 'react-redux'
+import { fetchCustomProducts } from '../Redux/Slices/productsSlice'
+
 function Navbar() {
 
     const [query, setQuery] = useState("");
     const style = "text-[14px] cursor-pointer ml-[25px] mobile:ml-[5px]";
     const navigate = useNavigate();
+    const dispatch = useDispatch()
     const productsInCart = useSelector(selectQuantityOfProductsInCart)
 
     const handleSubmit = () => {
+        dispatch(fetchCustomProducts(`name[$like]=*${query}*`))
         navigate(`/search/name[$like]=*${query}*`)
     }
 
@@ -35,7 +40,7 @@ function Navbar() {
 
             {/* Logo */}
             <div className='center flex-1 text-center mobile:ml-6' onClick={() => navigate("/")}>
-                <div className='logo font-bold text-lg mobile:text-sm'><button className="border-solid border border-slate-400">AIRMAN-PROJECT</button></div>
+                <div className='logo font-bold text-lg mobile:text-sm'><button>AIRMAN-PROJECT</button></div>
             </div>
             
             {/* Right Div */}

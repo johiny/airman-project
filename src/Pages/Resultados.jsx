@@ -6,17 +6,18 @@ import SearchBar from '../components/SearchBar'
 import ProductLoaderCard from '../components/ProductLoaderCard'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCustomProducts, selectProductsData, fetchAllProducts} from '../Redux/Slices/productsSlice'
+import { fetchCustomProducts, selectProductsData, fetchAllProducts, selectIsFirstFetch} from '../Redux/Slices/productsSlice'
 const Resultados = ({className}) => {
      const {query} = useParams()
      const dispatch = useDispatch()
      const productos = useSelector((state) => selectProductsData(state))
+     const isFirstFetch = useSelector(selectIsFirstFetch)
      useEffect(()=> {
-          if(query != undefined)
+          if(query != undefined && isFirstFetch)
           {
             dispatch(fetchCustomProducts(query))
           }
-          else{
+          else if (isFirstFetch){
             dispatch(fetchAllProducts())
           }
      },[query, dispatch])
