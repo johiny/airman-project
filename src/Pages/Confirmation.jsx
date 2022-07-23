@@ -4,13 +4,19 @@ import { css } from 'styled-components'
 import { useParams } from 'react-router-dom'
 import { useTimeoutFn } from "react-use";
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import useCountDown from "../hooks/useCountDown"
+import { removeData } from '../Redux/Slices/formSlice';
 const Confirmation = ({className}) => {
     const {confirmationState} = useParams()
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const counter = useCountDown(3)
     useEffect(() => {
+        if (confirmationState === "success") {
+            dispatch(removeData())
+        }
         if(counter <= 0){
             navigate(confirmationState == "success" ? `/` : `/purchaseForm`)
         }
