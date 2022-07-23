@@ -56,7 +56,7 @@ const dataFormSchema = Yup.object({
       <DataSection>
       <h1>Please enter your info</h1>
       <Formik
-        initialValues={formDataSelector.data || {
+        initialValues={formDataSelector[0] || {
           firstName: "",
           lastName: "",
           email: "",

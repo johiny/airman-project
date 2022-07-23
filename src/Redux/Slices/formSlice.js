@@ -1,16 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = []
+const initialState = [];
 
 export const formSlice = createSlice({
   name: "form",
   initialState,
   reducers: {
     addData(state, action) {
-      state = action.payload;
+      if(state.length > 0) {
+        state[0] = action.payload
+      }
+      state.push(action.payload);
     },
     removeData(state, action) {
-      state = initialState;
+      state.pop();
     },
   },
 });

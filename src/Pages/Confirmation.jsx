@@ -10,13 +10,14 @@ import useCountDown from "../hooks/useCountDown"
 import { removeData } from '../Redux/Slices/formSlice';
 const Confirmation = ({className}) => {
     const {confirmationState} = useParams()
-    const dispatch = useDispatch()
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const counter = useCountDown(3)
     useEffect(() => {
-        if (confirmationState === "success") {
+        if(confirmationState === "success") {
             dispatch(removeData())
         }
+
         if(counter <= 0){
             navigate(confirmationState == "success" ? `/` : `/purchaseForm`)
         }
