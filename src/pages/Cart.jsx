@@ -34,7 +34,12 @@ function Cart() {
                 Carrito
             </div>
             <div className='flex item-center justify-between mt-4 mobile:flex-col'>
-                <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white hover:text-[#2A2550] mt-0' onClick={() => navigate2("/search")} >Seguir Comprando</button>
+                {
+                    totalQuantity > 0 ?
+                    <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white hover:text-[#2A2550] mt-0' onClick={() => navigate2("/search")} >Seguir Comprando</button>
+                    :
+                    <button className='btn bg-white text-[#2A2550] border-2 border-[#2A2550] hover:bg-white hover:text-[#2A2550] mt-0' onClick={() => navigate2("/")} >Inicio</button>
+                }
                 <div className='flex underline text-lg hover:cursor-pointer mobile:m-5'>
                     <p>
                         Total de objetos seleccionados: {`${totalQuantity || 0}`}
