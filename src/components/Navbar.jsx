@@ -7,6 +7,7 @@ import {selectQuantityOfProductsInCart} from "../Redux/Slices/cartSlice"
 import { useDispatch } from 'react-redux'
 import { fetchCustomProducts } from '../Redux/Slices/productsSlice';
 import Announce from '../Components/Announce';
+import Logo from '../Components/Logo';
 
 function Navbar() {
 
@@ -25,7 +26,7 @@ function Navbar() {
     <div className="relative">
         <div className="fixed top-0 left-0 right-0 z-10 mobile:pl-0 mobile:pr-0">
             <Announce/>
-            <div className='navbar h-[60px] shadow-md bg-white'>
+            <div className='navbar h-[80px] shadow-md bg-white'>
                 <div className='wrapper pl-[20px] pr-[20px] pt-[10px] pb-[10px] flex justify-between items-center'>
                 
                     <div className='left flex flex-1 items-center'>
@@ -43,8 +44,10 @@ function Navbar() {
                     </div>
 
                     {/* Logo */}
-                    <div className='center flex-1 text-center mobile:ml-6' onClick={() => navigate("/")}>
-                        <div className='logo font-bold text-lg mobile:text-sm'><button>AIRMAN-PROJECT</button></div>
+                    <div className='center flex-1 text-center mobile:ml-10 cursor-pointer' onClick={() => navigate("/")}>
+                        <div className='logo flex justify-center mobile:justify-center'>
+                            <Logo className='w-[10%] h-[10%] mobile:w-[80%] mobile:h-[80%]' />
+                        </div>
                     </div>
                     
                     {/* Right Div */}

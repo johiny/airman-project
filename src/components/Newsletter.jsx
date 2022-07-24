@@ -2,7 +2,7 @@ import React from 'react';
 import {Send} from '@material-ui/icons';
 function Newsletter() {
   return (
-    <div className='flex justify-center items-center h-[350px] w-[100%] flex-col bg-[#E04D01] '>
+    <div className='flex justify-center mobile:justify-center items-center h-[350px] w-[100%] flex-col bg-[#E04D01] '>
         <h1 className='text-[50px] font-bold text-white'>
             Boletin Informativo
         </h1>

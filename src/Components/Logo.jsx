@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../Media/Logo.svg'
+import logo from '../Media/logoairman.png'
 import styled from 'styled-components'
 const Logo = ({className}) => {
   return (
@@ -8,8 +8,5 @@ const Logo = ({className}) => {
 }
 
 export default styled(Logo)`
-    grid-column-start: 1;
-    grid-row-start: 1;
-    margin: 2%;
-    width: 50%;
+  
 `

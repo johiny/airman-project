@@ -1,50 +1,16 @@
 import { EmailOutlined, Facebook, Instagram, LocalPhoneOutlined, LocationOnOutlined, Phone, Pinterest, Twitter } from "@material-ui/icons";
 import React from "react";
+import LogoLight from '../Components/LogoLight';
+import {useNavigate} from "react-router-dom";
 
 const Footer = () => {
-    const socialStyle = 'm-3 rounded-full cursor-pointer p-2 text-white';
+    
+  const navigate = useNavigate();
+
   return (
 
-    <div className="flex items-center justify-around p-2 mobile:flex-col mobile:items-start">
-      <div className="flex-1 flex flex-col flex-wrap p-2">
-        <h1 className="text-[25px]">Airman Project</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem
-          soluta quis porro eveniet. Nulla modi, quas unde eaque vel, quaerat
-          repellendus dignissimos iure itaque architecto pariatur quia a eveniet
-          veniam?
-        </p>
-        <div className="flex items-center justify-center mt-3 self-start">
-          <div className={socialStyle + ` bg-blue-700`}>
-            <Facebook />
-          </div>
-          <div className={socialStyle + ` bg-orange-500`}>
-            <Instagram />
-          </div>
-          <div className={socialStyle + ` bg-sky-400`}>
-            <Twitter />
-          </div>
-          <div className={socialStyle + ` bg-red-600`}>
-            <Pinterest/>
-          </div>
-        </div>
-      </div>
-
-
-      <div className="flex-1 flex flex-col p-2">
-        <div className="flex m-3">
-            <LocationOnOutlined className="text-[#251D3A]"/>
-            <p className='pl-3'>Bootcamp React</p>
-        </div>
-        <div className="flex m-3">
-            <LocalPhoneOutlined className="text-[#251D3A]"/>
-            <p className='pl-3'>+502</p>
-        </div>
-        <div className="flex m-3">
-            <EmailOutlined className="text-[#251D3A]"/>
-            <p className='pl-3'>Codigofacilito@gmail.com</p>
-        </div>
-      </div>
+    <div className="flex items-center justify-center p-2 mobile:flex-col mobile:justify-center w-[100%] h-[100%] mobile:w-[100%] mobile:h-[100%] bg-[#251D3A] cursor-pointer" onClick={() => navigate("/")} >
+        <LogoLight/>
     </div>
   );
 };
