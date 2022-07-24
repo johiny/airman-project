@@ -6,6 +6,7 @@ import Newsletter from '../components/Newsletter';
 
 function Home() {
   return <>
+        <div className='mb-20'></div>
         <Slider/>
         <Categories/>
         <Products/>
