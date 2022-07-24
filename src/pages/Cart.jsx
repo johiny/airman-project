@@ -25,8 +25,6 @@ function Cart() {
 
     const navigate = useNavigate();
     const navigate2 = useNavigate();
-    console.log(totalQuantity)
-
   return (
     <div className='mt-20'><br/>
         
