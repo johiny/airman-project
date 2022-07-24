@@ -23,15 +23,19 @@ const Resultados = ({className}) => {
      },[query, dispatch])
 
   return (
-    <div className={className}>
-    <SearchBar/>
-    <ProductsContainer>
-    {productos.map((producto) => {
-      return <ProductCardJ producto={producto} key={producto.id}/>
-    } )}
-    {productos.length > 0 ? <ProductLoaderCard query={query}/> : null}
-    </ProductsContainer>
+    <div>
+      <div className='mt-40'></div>
+      <div className={className}>
+        <SearchBar/>
+        <ProductsContainer>
+        {productos.map((producto) => {
+          return <ProductCardJ producto={producto} key={producto.id}/>
+        } )}
+        {productos.length > 0 ? <ProductLoaderCard query={query}/> : null}
+        </ProductsContainer>
+      </div>
     </div>
+    
   )
 }
 

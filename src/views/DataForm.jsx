@@ -53,35 +53,39 @@ const dataFormSchema = Yup.object({
     };
 
     return (
-      <DataSection>
-      <h1>Please enter your info</h1>
-      <Formik
-        initialValues={formDataSelector[0] || {
-          firstName: "",
-          lastName: "",
-          email: "",
-          streetAddress: "",
-          phoneNumber: "",
-          cardNumber: "",
-          cardHolder: "",
-          expirationDate: "",
-          cvv: ""
-        }}
-        onSubmit={(values)=> handleSubmit(values, navigate)}
-        validationSchema={dataFormSchema}
-      >
-        <Form>
-          <BasicInfo />
-          <PaymentInfo />
+      <div>
+        <div className="mt-40"></div>
+        <DataSection>
+          <h1 className="text-xl">POR FAVOR INGRESA TU INFORMACIÓN</h1>
+          <Formik
+            initialValues={formDataSelector[0] || {
+              firstName: "",
+              lastName: "",
+              email: "",
+              streetAddress: "",
+              phoneNumber: "",
+              cardNumber: "",
+              cardHolder: "",
+              expirationDate: "",
+              cvv: ""
+            }}
+            onSubmit={(values)=> handleSubmit(values, navigate)}
+            validationSchema={dataFormSchema}
+          >
+            <Form>
+              <BasicInfo />
+              <PaymentInfo />
 
-          <FormButtons>
-            <FormButton type="submit">Send</FormButton>
-            <FormButton type="reset">Reset</FormButton>
-          </FormButtons>
-          
-        </Form>
-      </Formik>
-    </DataSection>
+              <FormButtons>
+                <FormButton type="submit">Send</FormButton>
+                <FormButton type="reset">Reset</FormButton>
+              </FormButtons>
+              
+            </Form>
+          </Formik>
+        </DataSection>
+      </div>
+
   );
 };
 
