@@ -25,12 +25,12 @@ function Cart() {
 
     const navigate = useNavigate();
     const navigate2 = useNavigate();
-    
+    console.log(totalQuantity)
 
   return (
     <div className='mt-20'><br/>
         
-        <CardAlert/>
+        { totalQuantity > 0 ? null : <CardAlert/> }
         <div className='p-3'>
             <div className='flex justify-center text-5xl'>
                 Carrito

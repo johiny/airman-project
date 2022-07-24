@@ -8,7 +8,7 @@ import { selectFetchStatus, selectTotalProductsInStore } from "../Redux/Slices/p
 const MainLayout = () => {
   const status = useSelector((state) => selectFetchStatus(state))
   const productsInStore = useSelector(selectTotalProductsInStore)
-    const isLoading = status === 'pending' || 'idle'
+    const isLoading = status === 'pending'
     const isError = status === 'rejected'
 
   return (
