@@ -7,7 +7,7 @@ const CartResumenWindow = () => {
     const discount = useSelector(selectStoreDiscount)
     const shipmentprice = useSelector(selectShippingPrice)
   return (
-    <div className=' p-5 flex-[0.4] w-auto h-[25vh] border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6'>
+    <div className=' p-5 flex-[0.4] w-auto h-fit border-2 border-[#2A2550] rounded-md shadow-lg flex flex-col  items-center mobile:mb-6 ml-2'>
         <h1 className='text-[2rem]'>Resumen</h1>
         <div className={resumenStyle}>
             <p>Subtotal</p>

@@ -29,7 +29,7 @@ function Cart() {
     <div className='mt-20'><br/>
         
         { totalQuantity > 0 ? null : <CardAlert/> }
-        <div className='p-3'>
+        <div className='p-3 py-3'>
             <div className='flex justify-center text-5xl'>
                 Carrito
             </div>
