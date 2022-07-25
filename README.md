@@ -78,19 +78,21 @@ Airman Project es un e-commerce totalmente funcional del lado Front-End construi
 </table>
 
 
-
-| Tecnologia |  URL|  Descripcion |    |
+<div align="center">
+  
+| |Tecnologia   | URL |  Descripcion   |
 |-----------|------|---------------------------------------------------|------|
-| REACT     | https://es.reactjs.org/ | Escrito en React  |<a href="#"> <img alt="" src="https://user-images.githubusercontent.com/26189854/180860461-015065da-4aed-4491-86e2-cbf16e2c996c.svg" width="40"></a> |
-| REDUX     | https://redux.js.org/   | Manejador de estado Global |  <a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180860987-7e9f638f-c4b4-435b-b5af-497c9594472b.png" width="30"></a> |
-| VITE JS   | https://vitejs.dev/     | Bundler utilizado | <a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180861521-b0d0e533-b1c4-4f09-8b35-c79bd1d1ceda.svg" width="40"></a> |
-|REACT ROUTER | https://reactrouter.com/  | Manejador de rutas | <a href="#"><img alt="Go" src="https://user-images.githubusercontent.com/26189854/180863367-351a4fba-cbe0-467d-90ba-0a07bd3c7411.svg" width="40"></a>  |
-|FORMIK | https://formik.org/  | Manejo de formularios | <a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180864034-fc6f7415-38a9-4358-9a75-6e514a7e5993.png" width="40"></a> |
-|TAILWIND CSS | https://tailwindcss.com/  | Framework UI CSS | <a href="#"><img alt="Bash" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="40"></a> |
-|AXIOS | https://axios-http.com/   | Llamadas a la API | <a href="#"><img alt="Bash" src="https://user-images.githubusercontent.com/26189854/180864309-ea613a7e-7f57-46d3-95f1-b7a852ab789b.svg" width="40"></a> |
-|VERCEL| https://vercel.com/  | Servidor utilizado para desplegarlo en la nube |  <a href="#"><img alt="" src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png" width="40"></a>  |
-|HOOKS REUSABLES| https://github.com/streamich/react-use  | Implementados en el proyecto | <a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180871523-21bbaa4b-fafe-403a-ba9e-d6cd9585ba29.png" width="40"></a> |
+|<a href="#"> <img alt="" src="https://user-images.githubusercontent.com/26189854/180860461-015065da-4aed-4491-86e2-cbf16e2c996c.svg" width="40"></a>|REACT|https://es.reactjs.org/| Escrito en React    |
+|<a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180860987-7e9f638f-c4b4-435b-b5af-497c9594472b.png" width="30"></a>|REDUX |https://redux.js.org/  | Manejador de estado Global   |
+|<a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180861521-b0d0e533-b1c4-4f09-8b35-c79bd1d1ceda.svg" width="40"></a>   |VITE JS |https://vitejs.dev/ | Bundler utilizado  |
+|<a href="#"><img alt="Go" src="https://user-images.githubusercontent.com/26189854/180863367-351a4fba-cbe0-467d-90ba-0a07bd3c7411.svg" width="40"></a> |REACT ROUTER|https://reactrouter.com/| Manejador de rutas |
+| <a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180864034-fc6f7415-38a9-4358-9a75-6e514a7e5993.png" width="40"></a> |FORMIK| https://formik.org/ |Manejo de formularios |
+|<a href="#"><img alt="Bash" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="40"></a> |TAILWIND CSS| https://tailwindcss.com/ | Framework UI CSS |
+|<a href="#"><img alt="Bash" src="https://user-images.githubusercontent.com/26189854/180864309-ea613a7e-7f57-46d3-95f1-b7a852ab789b.svg" width="40"></a>|AXIOS |https://axios-http.com/ | Llamadas a la API |
+|<a href="#"><img alt="" src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png" width="40"></a> |VERCEL |https://vercel.com/ |  Servidor utilizado para desplegarlo en la nube  |
+|<a href="#"><img alt="" src="https://user-images.githubusercontent.com/26189854/180871523-21bbaa4b-fafe-403a-ba9e-d6cd9585ba29.png" width="40"></a>|HOOKS REUSABLES |https://github.com/streamich/react-use|  Implementados en el proyecto|
 
+</div>
 
 
 
