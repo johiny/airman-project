@@ -1,9 +1,9 @@
 # PROYECTO FINAL
 
-
-
 ![cover](https://user-images.githubusercontent.com/26189854/178131852-adaad2a1-62bd-412c-8f60-a6c8c29c6c1c.png)
 
+
+![logoblanco](https://user-images.githubusercontent.com/26189854/180691425-d728c385-3c2b-4426-93a5-41390791be04.jpg)
 
 # PASOS PARA EJECUTAR AIRMAN PROJECT
 
@@ -61,9 +61,22 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 ![airman](https://user-images.githubusercontent.com/26189854/180683113-113c9849-83e6-41f4-aaa5-0397ac22b20b.gif)
 
+TAILWIND CSS
 
+# HERRAMIENTAS UTILIZADAS EN LA APLICACIÓN
 
-## HERRAMIENTAS UTILIZADAS EN LA PAGINA
+HOOKS REUSABLES
 
+| Tecnologia |  URL|  Descripcion |
+|-----------|------|---------------------------------------------------|
+| REACT     | https://es.reactjs.org/ | Escrito en React  |
+| REDUX     | https://redux.js.org/   | Manejador de estado Global |
+| VITE JS   | https://vitejs.dev/     | Bundler utilizado |
+|REACT ROUTER | https://reactrouter.com/  | Manejador de rutas |
+|FORMIK | https://formik.org/  | Manejo de formularios |
+|TAILWIND CSS | https://tailwindcss.com/  | Framework UI CSS |
+|AXIOS | https://axios-http.com/   | Llamadas a la API |
+|VERCEL| https://vercel.com/  | Servidor utilizado para desplegarlo en la nube |
+|HOOKS REUSABLES|   | Implementados en el proyecto |
 
 
