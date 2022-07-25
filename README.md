@@ -5,6 +5,12 @@
 
 ![logoblanco](https://user-images.githubusercontent.com/26189854/180691425-d728c385-3c2b-4426-93a5-41390791be04.jpg)
 
+```
+Airman project surge como una idea alternativa al buscador de vuelos para combinar el poder de react 
+y sus populares librerias para crear un poderoso e-commerce
+```
+
+
 # PASOS PARA EJECUTAR AIRMAN PROJECT
 
 
@@ -51,21 +57,20 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 `$ yarn run dev `
 
-![2022-07-24_20h33_13](https://user-images.githubusercontent.com/26189854/180681902-af268daf-adc1-40dd-8cb1-ef5dd1bd1433.png)
 
-
-# 5. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
 
 ![2022-07-24_20h34_36](https://user-images.githubusercontent.com/26189854/180682048-a3a9e50b-8cd3-4a2b-ae69-47f12375d9ca.png)
+
+# 5. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
 
 
 ![airman](https://user-images.githubusercontent.com/26189854/180683113-113c9849-83e6-41f4-aaa5-0397ac22b20b.gif)
 
-TAILWIND CSS
+
 
 # HERRAMIENTAS UTILIZADAS EN LA APLICACIÓN
 
-HOOKS REUSABLES
+
 
 | Tecnologia |  URL|  Descripcion |
 |-----------|------|---------------------------------------------------|
@@ -77,6 +82,6 @@ HOOKS REUSABLES
 |TAILWIND CSS | https://tailwindcss.com/  | Framework UI CSS |
 |AXIOS | https://axios-http.com/   | Llamadas a la API |
 |VERCEL| https://vercel.com/  | Servidor utilizado para desplegarlo en la nube |
-|HOOKS REUSABLES|   | Implementados en el proyecto |
+|HOOKS REUSABLES| https://github.com/streamich/react-use  | Implementados en el proyecto |
 
 
