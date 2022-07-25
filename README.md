@@ -2,16 +2,27 @@
 
 ![cover](https://user-images.githubusercontent.com/26189854/178131852-adaad2a1-62bd-412c-8f60-a6c8c29c6c1c.png)
 
-![logoblanco](https://user-images.githubusercontent.com/26189854/180712585-14300708-28c6-4a47-bf35-2a3e496169fb.png)
+![180712585-14300708-28c6-4a47-bf35-2a3e496169fb](https://user-images.githubusercontent.com/26189854/180832395-d0bd4d8f-cb59-4153-aa30-74280abd6fba.png)
 
-```
-Airman project surge como una idea alternativa al buscador de vuelos para combinar el poder de react 
-y sus populares librerias para crear un poderoso e-commerce
-```
+` 
+Airman Project es un e-commerce totalmente funcional del lado Front-End construido con un stack moderno compuesto de React, React-Router, Redux, Styled Components, Tailwind, Formik, Yup, Axios, Material UI y Vite, su principal objetivo es brindarle una gran comodidad de búsqueda de productos al usuario evitando lo mas posible llamadas a la API del Back End.
+`
+
+<br/>
+
+## ⚡ Tecnologías
+
+<p align="left"> 
+    <a href="https://reactjs.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/react-native.png"/> </a>
+    <a href="https://redux.js.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/redux.png"/> </a>
+    <a href="https://tailwindcss.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/tailwindcss.png"/> </a>
+    
+</p>
+<br/><br/>
 
 
 # PASOS PARA EJECUTAR AIRMAN PROJECT LOCALMENTE
-
+<br/><br/>
 
 ## 1. Antes que nada debes tener instalado NodeJs
 Por aca dejo el link de NodeJs para que puedas instalarlo 
@@ -20,6 +31,7 @@ Por aca dejo el link de NodeJs para que puedas instalarlo
 
 ![image](https://user-images.githubusercontent.com/26189854/180676650-1718736e-c6d7-45fc-a558-a127043d92ff.png)
 
+<br/><br/><br/>
 
 ## 2. Ya debes tener instalado GIT
 Por aca dejo el link para que puedas instalarlo
@@ -28,17 +40,24 @@ Por aca dejo el link para que puedas instalarlo
 
 ![2022-07-24_19h43_45](https://user-images.githubusercontent.com/26189854/180677442-bc22ca3a-13ba-4c84-b98a-a5bb3df37afd.png)
 
+<br/><br/><br/>
 
 ## 3. Ahora debes Clonar el repositorio
 Bueno a todo esto ya debes saber como clonar un repo No?:neutral_face:
 
 >Debes ingresar el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y luego el siguiente comando:
 
-`$ git clone https://github.com/johiny/airman-project.git `
+<br/><br/>
+
+```
+$ git clone https://github.com/johiny/airman-project.git
+```
+<br/><br/>
 
 
 ![2022-07-24_22h20_38](https://user-images.githubusercontent.com/26189854/180698243-3c25daca-b55c-4dc3-8dbc-989b76dd6bee.png)
 
+<br/><br/><br/>
 
 
 ## 4. Necesitas instalar las dependencias
@@ -47,26 +66,45 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 >Ingresa el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y luego el siguiente comando:
 
-`$ yarn install `
+<br/><br/>
 
+```
+$ yarn install
+```
+
+
+
+<br/><br/>
 
 ![2022-07-24_22h14_50](https://user-images.githubusercontent.com/26189854/180697706-424c00e2-8bb3-406f-a4fc-8cad1056961a.png)
 
+<br/><br/><br/>
 
 
 ## 5. Ejecuta el proyecto
 
 >Ingresa el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y luego el siguiente comando:
 
-`$ yarn run dev `
+<br/><br/>
+
+```
+$ yarn run dev 
+```
+<br/><br/>
+
 
 ![2022-07-24_22h22_01](https://user-images.githubusercontent.com/26189854/180698367-87ce5ed1-487c-4dfd-a753-ee897f3dada6.png)
 
-# 6. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
+<br/><br/><br/>
 
+
+# 6. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
+<br/>
 
 ![airman](https://user-images.githubusercontent.com/26189854/180683113-113c9849-83e6-41f4-aaa5-0397ac22b20b.gif)
 
+
+<br/><br/><br/>
 
 
 # HERRAMIENTAS UTILIZADAS EN LA APLICACIÓN
