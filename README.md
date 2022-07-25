@@ -10,14 +10,77 @@ Airman Project es un e-commerce totalmente funcional del lado Front-End construi
 
 <br/>
 
-## ⚡ Tecnologías
+## ⚡  Tecnologías
 
-<p align="left"> 
-    <a href="https://reactjs.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/react-native.png"/> </a>
-    <a href="https://redux.js.org/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/redux.png"/> </a>
-    <a href="https://tailwindcss.com/" target="_blank"> <img src="https://img.icons8.com/color/48/000000/tailwindcss.png"/> </a>
-    
-</p>
+
+
+<table align="center">
+  
+  </tr>
+    <td>
+      <a href="https://pipedream.com/docs/code/go/">
+        <img alt="" src="https://user-images.githubusercontent.com/26189854/180860461-015065da-4aed-4491-86e2-cbf16e2c996c.svg" width="100">
+      </a>
+    </td>
+    <td>
+      <a href="https://pipedream.com/docs/code/bash/">
+        <img alt="" src="https://user-images.githubusercontent.com/26189854/180860987-7e9f638f-c4b4-435b-b5af-497c9594472b.png" width="100">
+      </a>
+    </td>
+     <td>
+      <a href="https://pipedream.com/docs/code/python/">
+        <img alt="" src="https://user-images.githubusercontent.com/26189854/180861521-b0d0e533-b1c4-4f09-8b35-c79bd1d1ceda.svg" width="100">
+      </a>
+    </td>
+    </td>
+      
+  </tr>
+  
+  </tr>
+    <td>
+      <a href="https://pipedream.com/docs/code/go/">
+        <img alt="Go" src="https://user-images.githubusercontent.com/26189854/180863367-351a4fba-cbe0-467d-90ba-0a07bd3c7411.svg" width="100">
+      </a>
+    </td>
+    <td>
+      <a href="https://pipedream.com/docs/code/bash/">
+        <img alt="Bash" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" width="100">
+      </a>
+    </td>
+     <td>
+      <a href="https://pipedream.com/docs/code/python/">
+        <img alt="" src="https://logovtor.com/wp-content/uploads/2020/10/vercel-inc-logo-vector.png" width="100">
+      </a>
+    </td>
+    </td>
+       
+  </tr>
+  
+  </tr>
+    <td>
+      <a href="https://pipedream.com/docs/code/go/">
+        <img alt="" src="https://user-images.githubusercontent.com/26189854/180864034-fc6f7415-38a9-4358-9a75-6e514a7e5993.png" width="100">
+      </a>
+    </td>
+    <td>
+      <a href="https://pipedream.com/docs/code/bash/">
+        <img alt="Bash" src="https://user-images.githubusercontent.com/26189854/180864309-ea613a7e-7f57-46d3-95f1-b7a852ab789b.svg" width="100">
+      </a>
+    </td>
+     <td>
+      <a href="https://pipedream.com/docs/code/python/">
+        <img alt="" src="" width="100">
+      </a>
+    </td>
+    </td>
+       
+  </tr>
+  
+</table>
+
+
+
+
 <br/><br/>
 
 
