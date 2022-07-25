@@ -12,12 +12,14 @@ const Processing = () => {
             navigate(`/confirmation/${message}`)
     }
     useTimeoutFn(redirect, 3000)
-    return ( 
+    return (
+        <div className="py-44">
         <DataSectionSmall>
             <h1>Processing transaction</h1>
             <p>This may take a while...</p>
             <Loader2 />
         </DataSectionSmall>
+        </div>
      );
 }
  

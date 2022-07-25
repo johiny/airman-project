@@ -53,8 +53,7 @@ const dataFormSchema = Yup.object({
     };
 
     return (
-      <div>
-        <div className="mt-40"></div>
+      <div className="py-36">
         <DataSection>
           <h1 className="text-xl">POR FAVOR INGRESA TU INFORMACIÓN</h1>
           <Formik

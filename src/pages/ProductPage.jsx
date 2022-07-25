@@ -33,7 +33,7 @@ const ProductPage = () => {
         <div className='mb-20'></div>
         {product == undefined ? null :
         <div>
-          <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 mb-5">
+          <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 py-7">
             <div className="flex-1 flex items-center justify-center">
               <img
                 src={product.image}
