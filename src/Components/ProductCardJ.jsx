@@ -11,7 +11,7 @@ const ProductCardJ = ({producto, className}) => {
     const [imgError, setImgError] = useState(false)
   return (
     <div className={className} onClick={() => navigate(`/product/${producto.id}`)}>
-        <img src={imgError ? cat404 : producto.image} onError={() => setImgError(true)}/>
+        <img src={imgError ? cat404 : producto.image} alt={`Producto ${producto.name}`} onError={() => setImgError(true)}/>
         <div>
             <ProductName>{producto.name}</ProductName>
             <button onClick={(e) => {

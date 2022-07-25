@@ -38,7 +38,7 @@ const ProductPage = () => {
               <img
                 src={product.image}
                 className={imgStyle}
-                alt="product_image"
+                alt={`Producto  ${product.name}`}
               />
             </div>
             <div className="flex-[1.3] flex flex-col items-start  justify-items-center mt-10 mobile:items-center">
