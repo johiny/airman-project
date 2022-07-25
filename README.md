@@ -69,7 +69,7 @@ Airman Project es un e-commerce totalmente funcional del lado Front-End construi
     </td>
      <td>
       <a href="https://pipedream.com/docs/code/python/">
-        <img alt="" src="" width="100">
+        <img alt="" src="https://user-images.githubusercontent.com/26189854/180871523-21bbaa4b-fafe-403a-ba9e-d6cd9585ba29.png" width="100">
       </a>
     </td>
     </td>
@@ -174,16 +174,16 @@ $ yarn run dev
 
 
 
-| Tecnologia |  URL|  Descripcion |
-|-----------|------|---------------------------------------------------|
-| REACT     | https://es.reactjs.org/ | Escrito en React  |
-| REDUX     | https://redux.js.org/   | Manejador de estado Global |
-| VITE JS   | https://vitejs.dev/     | Bundler utilizado |
-|REACT ROUTER | https://reactrouter.com/  | Manejador de rutas |
-|FORMIK | https://formik.org/  | Manejo de formularios |
-|TAILWIND CSS | https://tailwindcss.com/  | Framework UI CSS |
-|AXIOS | https://axios-http.com/   | Llamadas a la API |
-|VERCEL| https://vercel.com/  | Servidor utilizado para desplegarlo en la nube |
-|HOOKS REUSABLES| https://github.com/streamich/react-use  | Implementados en el proyecto |
+| Tecnologia |  URL|  Descripcion |    |
+|-----------|------|---------------------------------------------------|------|
+| REACT     | https://es.reactjs.org/ | Escrito en React  |<a href="https://pipedream.com/docs/code/go/"> <img alt="" src="https://user-images.githubusercontent.com/26189854/180860461-015065da-4aed-4491-86e2-cbf16e2c996c.svg" width="30"></a> |
+| REDUX     | https://redux.js.org/   | Manejador de estado Global |  |
+| VITE JS   | https://vitejs.dev/     | Bundler utilizado | |
+|REACT ROUTER | https://reactrouter.com/  | Manejador de rutas |   |
+|FORMIK | https://formik.org/  | Manejo de formularios |  |
+|TAILWIND CSS | https://tailwindcss.com/  | Framework UI CSS |  |
+|AXIOS | https://axios-http.com/   | Llamadas a la API |  |
+|VERCEL| https://vercel.com/  | Servidor utilizado para desplegarlo en la nube |   |
+|HOOKS REUSABLES| https://github.com/streamich/react-use  | Implementados en el proyecto |  |
 
 
