@@ -37,7 +37,9 @@ Bueno a todo esto ya debes saber como clonar un repo No?:neutral_face:
 
 `$ git clone https://github.com/johiny/airman-project.git `
 
-![2022-07-24_20h06_40](https://user-images.githubusercontent.com/26189854/180679316-02d2f6d0-2848-4f4e-8f2e-eb883c00b999.png)
+
+![2022-07-24_22h20_38](https://user-images.githubusercontent.com/26189854/180698243-3c25daca-b55c-4dc3-8dbc-989b76dd6bee.png)
+
 
 
 ## 4. Necesitas instalar las dependencias
@@ -48,7 +50,9 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 `$ yarn install `
 
-![2022-07-24_20h25_59](https://user-images.githubusercontent.com/26189854/180681187-5cdc526d-c63e-41ae-9044-3d1113a6cecb.png)
+
+![2022-07-24_22h14_50](https://user-images.githubusercontent.com/26189854/180697706-424c00e2-8bb3-406f-a4fc-8cad1056961a.png)
+
 
 
 ## 4. Ejecuta el proyecto
@@ -57,9 +61,7 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 `$ yarn run dev `
 
-
-
-![2022-07-24_20h34_36](https://user-images.githubusercontent.com/26189854/180682048-a3a9e50b-8cd3-4a2b-ae69-47f12375d9ca.png)
+![2022-07-24_22h22_01](https://user-images.githubusercontent.com/26189854/180698367-87ce5ed1-487c-4dfd-a753-ee897f3dada6.png)
 
 # 5. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
 
