@@ -2,8 +2,7 @@
 
 ![cover](https://user-images.githubusercontent.com/26189854/178131852-adaad2a1-62bd-412c-8f60-a6c8c29c6c1c.png)
 
-
-![logoblanco](https://user-images.githubusercontent.com/26189854/180691425-d728c385-3c2b-4426-93a5-41390791be04.jpg)
+![logoblanco](https://user-images.githubusercontent.com/26189854/180712585-14300708-28c6-4a47-bf35-2a3e496169fb.png)
 
 ```
 Airman project surge como una idea alternativa al buscador de vuelos para combinar el poder de react 
@@ -11,7 +10,7 @@ y sus populares librerias para crear un poderoso e-commerce
 ```
 
 
-# PASOS PARA EJECUTAR AIRMAN PROJECT
+# PASOS PARA EJECUTAR AIRMAN PROJECT LOCALMENTE
 
 
 ## 1. Antes que nada debes tener instalado NodeJs
@@ -55,7 +54,7 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 
 
-## 4. Ejecuta el proyecto
+## 5. Ejecuta el proyecto
 
 >Ingresa el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y luego el siguiente comando:
 
@@ -63,7 +62,7 @@ Luego de haber clonado tu repositorio debes instalar las dependencias en la mism
 
 ![2022-07-24_22h22_01](https://user-images.githubusercontent.com/26189854/180698367-87ce5ed1-487c-4dfd-a753-ee897f3dada6.png)
 
-# 5. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
+# 6. LISTO! :sunglasses: la aplicación se estara ejecutando correctamente :raised_hands: :muscle:
 
 
 ![airman](https://user-images.githubusercontent.com/26189854/180683113-113c9849-83e6-41f4-aaa5-0397ac22b20b.gif)
