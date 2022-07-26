@@ -1,4 +1,10 @@
-# PROYECTO FINAL
+# 
+
+<div align="center">
+  <h1>
+     PROYECTO FINAL
+  </h1> 
+</div>
 
 ![cover](https://user-images.githubusercontent.com/26189854/178131852-adaad2a1-62bd-412c-8f60-a6c8c29c6c1c.png)
 
@@ -100,13 +106,54 @@ Airman Project es un e-commerce totalmente funcional del lado Front-End construi
 
 </div>
 
+<br/> <br/>
 
+
+# 
+<div align="center">
+ 
+<h1>EQUIPO</h1>
+
+<table>
+  </tr>
+    <td>
+      <a href="https://github.com/Erik161" target="_blank">
+        <img width="150" height="150" src="https://cdn.discordapp.com/attachments/938468548160933898/1001194167046774866/foto_1.png">
+        <p align="center"><strong>ERIK HERNÁNDEZ</strong></p>
+      </a>
+    </td>
+    <td>
+      <a href="https://github.com/johiny" target="_blank">
+        <img width="150" height="150" src="https://cdn.discordapp.com/attachments/938468548160933898/1001005732709277767/JOVEN-1.png">
+        <p align="center"><strong>JOHAN CASTILLO</strong> </p>
+      </a>
+    </td>
+     <td>
+      <a href="https://github.com/Bephoros" target="_blank">
+        <img width="150" height="150" src="https://cdn.discordapp.com/attachments/938468548160933898/1001011221597786112/bep-1.png">
+        <p align="center"><strong>OMAR RONQUILLO</strong></p>
+      </a>
+    </td>
+    </td>
+       
+  </tr>
+  
+ </table>
+   
+</div>
+
+# 
 
 
 <br/><br/>
 
 
-# PASOS PARA EJECUTAR AIRMAN PROJECT LOCALMENTE
+<div align="center">
+  <h1>
+     PASOS PARA EJECUTAR AIRMAN PROJECT LOCALMENTE
+  </h1> 
+</div>
+
 <br/><br/>
 
 ## 1. Antes que nada debes tener instalado NodeJs
@@ -127,7 +174,7 @@ Por aca dejo el link para que puedas instalarlo
 
 <br/><br/><br/>
 
-## 3. Ahora debes Clonar el repositorio
+## 3. Ahora debes clonar el repositorio
 Bueno a todo esto ya debes saber como clonar un repo No?:neutral_face:
 
 >Debes ingresar el siguiente comando en tu consola si estas en MAC o LINUX debes poner SUDO y luego el siguiente comando:
