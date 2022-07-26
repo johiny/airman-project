@@ -6,7 +6,7 @@
 
 
 
-# ------------ VER ONLINE: [:arrow_right: PREVIEW :arrow_left:](https://airman-project.vercel.app/) 
+# VER ONLINE: [:arrow_right: PREVIEW :arrow_left:](https://airman-project.vercel.app/) 
 
   
   
