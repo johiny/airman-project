@@ -26,11 +26,11 @@ const ProductPage = () => {
     }
   },[quantity])
     // Style img
-    const imgStyle = "rounded-lg shadow-lg w-[50%] h-[80%] ";
+    const imgStyle = "rounded-lg shadow-lg w-[47%] h-[80%] ";
 
     return (
         <>
-        <div className='mb-20 mobile:mb-40'></div>
+        <div className='mb-40 mobile:mb-40'></div>
         {product == undefined ? null :
         <div>
           <div className="flex justify-center mobile:flex-col mobile:mt-4 mobile:p-3 py-7">
