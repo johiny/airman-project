@@ -28,13 +28,13 @@ const Resultados = ({className}) => {
       <div className='mt-40'></div>
       <div className={className}>
         <SearchBar/>
+        {productos.length == 0 ? <NoProductsScreen/> :
         <ProductsContainer>
         {productos.map((producto) => {
           return <ProductCardJ producto={producto} key={producto.id}/>
         } )}
         {productos.length > 0 ? <ProductLoaderCard query={query}/> : null}
-        {productos.length == 0 ? <NoProductsScreen/> : null}
-        </ProductsContainer>
+        </ProductsContainer>}
       </div>
     </div>
     
@@ -44,5 +44,5 @@ const Resultados = ({className}) => {
 export default styled(Resultados)`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: minmax(min-content, max-content) 1fr ;
+    grid-template-rows: minmax(min-content, max-content);
 `
