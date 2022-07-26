@@ -7,6 +7,7 @@ import ProductLoaderCard from '../components/ProductLoaderCard'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCustomProducts, selectProductsData, fetchAllProducts, selectIsFirstFetch} from '../Redux/Slices/productsSlice'
+import NoProductsScreen from '../Components/NoProductsScreen'
 const Resultados = ({className}) => {
      const {query} = useParams()
      const dispatch = useDispatch()
@@ -32,6 +33,7 @@ const Resultados = ({className}) => {
           return <ProductCardJ producto={producto} key={producto.id}/>
         } )}
         {productos.length > 0 ? <ProductLoaderCard query={query}/> : null}
+        {productos.length == 0 ? <NoProductsScreen/> : null}
         </ProductsContainer>
       </div>
     </div>
