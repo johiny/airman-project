@@ -1,8 +1,8 @@
 import React from 'react';
-import Slider from "../components/Slider";
-import Categories from "../components/Categories";
-import Products from "../components/Products";
-import Newsletter from '../components/Newsletter';
+import Slider from "../Components/Slider"
+import Categories from "../Components/Categories";
+import Products from "../Components/Products";
+import Newsletter from '../Components/Newsletter';
 
 function Home() {
   return <>

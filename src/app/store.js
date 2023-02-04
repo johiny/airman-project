@@ -6,7 +6,6 @@ import formReducer from "../Redux/Slices/formSlice"
 
 const savedState = localStorage.getItem('state');
 const preloadedState = savedState ? JSON.parse(savedState) : undefined;
-console.log(preloadedState)
 
 export const store = configureStore({
     reducer: {
