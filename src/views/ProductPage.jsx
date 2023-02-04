@@ -1,8 +1,8 @@
 import  useFetch from "../hooks/useFetch";
 import ProductDescription from "../components/ProductDescription";
-import Loader from "../components/Loader";
-import Message from "../components/Message";
-import MainContent from "../components/MainContent";
+import Loader from "../Components/Loader";
+import Message from "../Components/Message";
+import MainContent from "../Components/MainContent";
 
 const ProductPage = () => {
   let url = "https://api-playground-test.herokuapp.com/products/43900";

@@ -1,7 +1,7 @@
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import BasicInfo from "../components/BasicInfo";
-import PaymentInfo from "../components/PaymentInfo";
+import BasicInfo from "../Components/BasicInfo";
+import PaymentInfo from "../Components/PaymentInfo";
 import { DataSection, FormButton, FormButtons } from "../styles/stylesCollection";
 import {useNavigate} from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux";
