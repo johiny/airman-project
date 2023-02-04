@@ -6,7 +6,7 @@ import formReducer from "../Redux/Slices/formSlice"
 
 const savedState = localStorage.getItem('state');
 const preloadedState = savedState ? JSON.parse(savedState) : undefined;
-
+console.log(preloadedState)
 
 export const store = configureStore({
     reducer: {
@@ -14,11 +14,13 @@ export const store = configureStore({
         cart : cartReducer,
         form: formReducer
     },
-    preloadedState: preloadedState
+   preloadedState: preloadedState
 })
 
 window.addEventListener('beforeunload', (e) => {
     const state = store.getState();
-    const serializedState = JSON.stringify(state);
-    localStorage.setItem('state', serializedState);
+    if(state.products.hasOwnProperty('productsData')){
+        const serializedState = JSON.stringify(state);
+        localStorage.setItem('state', serializedState);
+    }
   });

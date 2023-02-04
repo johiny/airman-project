@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const PRODUCTS_URL = "https://airman-bestbuy-api-playground.onrender.com/products"
+const PRODUCTS_URL = import.meta.env.VITE_API_URL
 
 const initialState = {
     productsData: [],
