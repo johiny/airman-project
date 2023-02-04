@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const PRODUCTS_URL = "https://api-playground-test.herokuapp.com/products"
+const PRODUCTS_URL = "https://airman-bestbuy-api-playground.onrender.com/products"
 
 const initialState = {
     productsData: [],
