@@ -1,10 +1,10 @@
-import Newsletter from '../components/Newsletter';
+import Newsletter from '../Components/Newsletter';
 import React from 'react'
 import { useNavigate } from "react-router-dom"
 import {useSelector} from "react-redux"
 import {selectProductsCart, selectQuantityOfProductsInCart} from "../Redux/Slices/cartSlice"
-import CartProductRow from '../components/CartProductRow';
-import CartResumenWindow from '../components/CartResumenWindow';
+import CartProductRow from '../Components/CartProductRow';
+import CartResumenWindow from '../Components/CartResumenWindow';
 import CardAlert from '../Components/CardAlert';
 
 function Cart() {
