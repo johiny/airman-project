@@ -1,5 +1,5 @@
 import './index.css'
-import WebRoutes from './components/WebRoutes';
+import WebRoutes from './Components/WebRoutes';
 import {Route, BrowserRouter} from "react-router-dom"
 import CategoryPage from "./Pages/CategoryPage";
 import Home from "./Pages/Home";
