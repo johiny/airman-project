@@ -1,4 +1,4 @@
-import Loader2 from "../components/Loader2";
+import Loader2 from "../Components/Loader2";
 import { DataSectionSmall } from "../styles/stylesCollection";
 import { useEffect } from "react";
 import {useNavigate} from "react-router-dom"

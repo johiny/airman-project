@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 import Loader from "./Loader";
 import { useSelector } from "react-redux";
 import { selectFetchStatus, selectTotalProductsInStore } from "../Redux/Slices/productsSlice";
