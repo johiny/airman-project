@@ -1,5 +1,5 @@
-import Newsletter from '../components/Newsletter';
-import Counter from '../components/Counter';
+import Newsletter from '../Components/Newsletter';
+import Counter from '../Components/Counter';
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux';
 import { selectSpecificProduct } from '../Redux/Slices/productsSlice';
