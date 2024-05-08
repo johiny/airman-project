@@ -14,8 +14,10 @@ const initialState = {
 export const fetchAllProducts = createAsyncThunk('products/fetchAllProducts', async () => {
     try {
         const response = await axios.get(`${PRODUCTS_URL}?$limit=25`)
+        console.log(response)
         return response.data
     } catch (err) {
+        console.log(err)
         return err.message        
     }
 })
@@ -120,7 +122,12 @@ export const selectTotalProductsCurrentQuery = (state) => state.products.totalPr
 export const selectIsFirstFetch = (state) => state.products.firstFetch
 export const selectTotalProductsInStore = (state) => {
     let total = 0;
-    state.products.productsData.forEach(() => total++ )
+    try{
+        state.products.productsData.forEach(() => total++ )
+    }
+    catch(err){
+        return total
+    }
     return total
 }
 export const selectSpecificProduct = (state, id) => {

@@ -52,7 +52,7 @@ function Slider() {
                             <div className="slide flex items-center justify-center h-[100%]">
                                 <div className="forImage flex flex-1 justify-center items-center h-[100%]">
                                     <img
-                                    className="h-[100%] object-cover"
+                                    className="h-[90%] object-cover rounded-lg relative right-10"
                                     src={slide.src}
                                     alt="slide_image"
                                     />

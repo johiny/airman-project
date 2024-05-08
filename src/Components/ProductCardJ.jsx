@@ -55,6 +55,7 @@ const ProductName = styled.span`
     grid-row: 1/1;
     text-align: center;
     align-self: center;
+    padding: 12px;
 `
 
 export default styled(ProductCardJ)`

@@ -8,8 +8,8 @@ import Product from './Product';
 function Products() {
 
     const dispatch = useDispatch()
-    const data = useSelector(selectProductsData)
-
+    const data = useSelector(selectProductsData) || []
+    
     useEffect(() => {
       dispatch(fetchCustomProducts(`name[$like]=*t-shirt*`))
     }, []);
